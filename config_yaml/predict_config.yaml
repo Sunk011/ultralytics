@@ -1,0 +1,27 @@
+# predict-detect配置文件
+# 模型相关配置
+model:
+  # 模型文件的路径，指定要使用的预训练模型文件位置
+  path: './jg_project/v001-epoch100-aug/weights/best.pt'
+  # 推理时使用的设备，'0' 表示使用第一个 GPU，'cpu' 表示使用 CPU
+  device: '0'
+
+# 输入源配置
+input:
+  # 输入数据的源地址，可以是文件路径、摄像头索引或 RTSP 流地址
+  # source: 'rtsp://localhost:8556/test-crop'
+  source: './datasets/test-video/mp4/343205-202507201624-202507201629.mp4'
+
+# 检测目标配置
+detection:
+  # 指定要检测的目标类别名称
+  target_class: 'bus'
+  # 检测置信度阈值，只有置信度高于此值的检测结果才会被保留
+  confidence_threshold: 0.45
+
+# 输出配置
+output:
+  # 检测结果保存的目录路径
+  save_directory: './inference_results/test/bus_crops_from_mp4'
+  # 是否显示检测结果的窗口，true 表示显示，false 表示不显示
+  display_window: false

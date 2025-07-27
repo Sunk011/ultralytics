@@ -1,0 +1,26 @@
+# 推理模型
+model:
+  # path: r"./jg_project/car_vis/epoch120_v1/weights/best.pt"
+  path: "/home/sk/project/jg_project/car_vis/epoch120_v1/weights/best.pt"
+# 输入视频/视频流地址
+input:
+  # source: "./datasets/test-video/test0/mp4/343205-202507201624-202507201629.mp4"
+  source: "/home/sk/project/datasets/test-video/test1/FFOutput/343464-1.mp4"
+# 输出路径
+output:
+  path: "./output"
+# 任务类型：
+#    crop_image：裁剪图像
+#    draw_image: 绘制图像
+#    save_video: 保存视频
+task:
+  type: 'draw_image'
+# 目标类别ID
+target_class_id: [1]
+
+# 推理设置
+infer_setting:
+  # 设备
+  device: '7'
+  # 置信度阈值
+  confidence_threshold: 0.5

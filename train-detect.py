@@ -42,14 +42,17 @@ def verify_environment_and_train():
         
         results = model.train(
             # 基础参数
-            data='/home/sk/project/datasets/car-detection/car-detection.yaml',  # 数据集配置文件
+            # data='/home/sk/project/datasets/car-detection/car-detection.yaml',  # 数据集配置文件
+            # data='VisDrone.yaml',  # 数据集配置文件
+            data='/home/sk/project/datasets/car_vis/car_vis.yaml',  # 数据集配置文件
             # model='/home/sk/project/ultralytics/yolo11m-obj365-640-Pretrain.pt',  # 预训练权重（推荐使用较大模型，4090算力足够支撑）
             epochs=150,  # 训练轮次（结合早停机制，无需过大）
             imgsz=1024,  # 输入图像尺寸（YOLO默认，兼顾精度和速度）
-            device='4,5,6,7',  # 指定4张GPU
+            # device='4,5,6,7',  # 指定4张GPU
+            device='0,5,6,7',  # 指定4张GPU
             
             # 批处理参数（关键优化）
-            batch=64,  # 总batch_size（4张卡均分，单卡16，24G显存足够）
+            batch=32,  # 总batch_size（4张卡均分，单卡16，24G显存足够）
             # 若出现OOM，可降至32（单卡8），但64更高效
             
             # 学习率与优化器（多卡适配）
@@ -77,7 +80,7 @@ def verify_environment_and_train():
             
             # 输出配置
             project='jg_project',  # 项目文件夹
-            name='v001-epoch100-aug',  # 实验名称
+            name='car_vis/epoch120_v1',  # 实验名称
             # exist_ok=True,  # 允许覆盖现有结果
             save=True,  # 保存模型
             val=True,   # 每轮训练后验证

@@ -22,18 +22,18 @@ def main():
     #    注意：后缀是 '-cls.pt'，代表这是分类模型！
     #    从分类预训练模型开始，效果远好于从检测模型开始。
     # model = YOLO('yolov8s-cls.pt')
-    model = YOLO("yolo11n-cls.yaml").load("/home/sk/project/jg_project/v001/weights/best.pt")  # build from YAML and transfer weights
+    model = YOLO("yolo11m-cls.yaml").load("/home/sk/project/jg_project/car_vis/epoch120_v1/weights/best.pt")  # build from YAML and transfer weights
     
 
     # 2. 开始训练分类模型
     print("开始训练分类模型...")
     results = model.train(
-        data='/home/sk/project/datasets/yolo_cropped_bus_dataset', # 【核心】直接指向数据集的根目录！
-        epochs=70,                  # 分类任务通常收敛更快，可以从50轮开始
+        data='/home/sk/project/datasets/yolo_dataset_bus_cls_dataset', # 【核心】直接指向数据集的根目录！
+        epochs=100,                  # 分类任务通常收敛更快，可以从50轮开始
         imgsz=224,                  # 分类模型常用尺寸，如 224x224
-        batch=1024,                   # 可以设置得比检测任务更大
+        batch=256,                   # 可以设置得比检测任务更大
         project='jg_project',  # 项目文件夹
-        name='cls/test',  # 实验名称
+        name='cls/test_yolo11m',  # 实验名称
         
         verbose=True,  # 打印详细日志
         patience=0,  # 早停轮次（15轮无提升则停止）
@@ -42,7 +42,9 @@ def main():
         fliplr=0.8,   # 左右翻转概率
         mosaic=1.0,   # 马赛克增强概率（1.0表示启用）
         
-        device= '4, 5, 6, 7'
+        # device= '4, 5, 6, 7'
+        # device= '0, 5, 6, 7'
+        device= '6, 7'
     )
     print("分类模型训练完成！")
     
