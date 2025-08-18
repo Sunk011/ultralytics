@@ -1,22 +1,23 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 """
 CrossTracker 配置加载器
-用于加载和管理 YAML 配置文件
+用于加载和管理 YAML 配置文件.
 """
 
-import yaml
 import os
-from pathlib import Path
 from typing import Any, Dict
+
+import yaml
 
 
 class ConfigSection:
-    """配置节类 - 支持动态属性访问"""
-    
+    """配置节类 - 支持动态属性访问."""
+
     def __init__(self, config_dict: Dict[str, Any]):
         self._config = config_dict
-    
+
     def __getattr__(self, name: str) -> Any:
-        """动态获取属性"""
+        """动态获取属性."""
         # 先尝试原始键名
         if name in self._config:
             value = self._config[name]
@@ -24,7 +25,7 @@ class ConfigSection:
             if isinstance(value, dict):
                 return ConfigSection(value)
             return value
-        
+
         # 尝试大写键名（向后兼容）
         upper_name = name.upper()
         if upper_name in self._config:
@@ -32,7 +33,7 @@ class ConfigSection:
             if isinstance(value, dict):
                 return ConfigSection(value)
             return value
-        
+
         # 尝试小写键名
         lower_name = name.lower()
         if lower_name in self._config:
@@ -40,11 +41,11 @@ class ConfigSection:
             if isinstance(value, dict):
                 return ConfigSection(value)
             return value
-        
+
         raise AttributeError(f"配置项 '{name}' 不存在")
-    
+
     def get(self, key: str, default: Any = None) -> Any:
-        """安全获取配置值"""
+        """安全获取配置值."""
         try:
             return getattr(self, key)
         except AttributeError:
@@ -52,63 +53,64 @@ class ConfigSection:
 
 
 class Config:
-    """配置管理类"""
-    
+    """配置管理类."""
+
     def __init__(self, config_path: str = "config.yaml"):
         """
-        初始化配置
-        
+        初始化配置.
+
         Args:
             config_path: 配置文件路径
         """
         self.config_path = config_path
         self._config = self._load_config()
-    
+
     def _load_config(self) -> Dict[str, Any]:
-        """加载配置文件"""
+        """加载配置文件."""
         if not os.path.exists(self.config_path):
             raise FileNotFoundError(f"配置文件未找到: {self.config_path}")
-        
-        with open(self.config_path, 'r', encoding='utf-8') as f:
+
+        with open(self.config_path, encoding="utf-8") as f:
             return yaml.safe_load(f)
-    
+
     def reload(self):
-        """重新加载配置文件"""
+        """重新加载配置文件."""
         self._config = self._load_config()
-    
+
     def get(self, key_path: str, default: Any = None) -> Any:
         """
-        获取配置值，支持点号路径
-        
+        获取配置值，支持点号路径.
+
         Args:
             key_path: 配置路径，如 'input_handler.buffer_size'
             default: 默认值
-            
+
         Returns:
             配置值
         """
-        keys = key_path.split('.')
+        keys = key_path.split(".")
         value = self._config
-        
+
         try:
             for key in keys:
                 value = value[key]
             return value
         except (KeyError, TypeError):
             return default
-    
+
     def __getattr__(self, name: str) -> ConfigSection:
-        """动态获取配置节"""
+        """动态获取配置节."""
         if name in self._config:
             return ConfigSection(self._config[name])
         raise AttributeError(f"配置节 '{name}' 不存在")
 
+
 # 全局配置实例
 
 
-#main
+# main
 if __name__ == "__main__":
-    config = Config('config_camera1.yaml')
+    config = Config("config_camera1.yaml")
     # from config_loader import config
 
     # 测试配置访问
