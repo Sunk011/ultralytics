@@ -1,3 +1,12 @@
+runs/
+
+
+# 权重文件
+weights/
+# PyTorch model files
+*.pt
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
