@@ -1,0 +1,231 @@
+
+- name: "visdrone-11m-1280-b32-e300"
+  # command: "cd /home/sk/project/ultralytics && nohup python ./code/train/train-visdrone-11m-1280-b32-e300.py 2>&1 >yolo_logs/visdrone_args-11m-1280-e300.log &"
+  command: "cd /home/sk/project/ultralytics && python ./code/train/train-visdrone-11m-1280-b32-e300.py"
+
+- name: "visdrone-8m-1280-b32-e300"
+  # command: "cd /home/sk/project/ultralytics && nohup python ./code/train/train-visdrone-8m-1280-b32-e300.py 2>&1 >yolo_logs/visdrone_args-8m-1280-e300.log &"
+  command: "cd /home/sk/project/ultralytics && python ./code/train/train-visdrone-8m-1280-b32-e300.py"
+
+- name: "visdrone-5m-1280-b32-e300"
+  # command: "cd /home/sk/project/ultralytics && nohup python ./code/train/train-visdrone-5m-1280-b32-e300.py 2>&1 >yolo_logs/visdrone_args-5m-1280-e300.log &"
+  command: "cd /home/sk/project/ultralytics && python ./code/train/train-visdrone-5m-1280-b32-e300.py "
+
+# - name: "任务4.09 YOLOv8m-world 1024"
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/YOLO-OV/No4_run_09.py"
+
+# - name: "任务4.10 YOLO11m-SPAR-v2 1024"
+  # command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/YOLO-OV/No4_run_10.py"
+
+# - name: "任务4.11 YOLO11m-SPAR-v3 1024"
+  # command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/YOLO-OV/No4_run_11.py"
+
+# # 任务4.12 YOLO11m-SPAR-v4 1024 使用预训练权重 配置同4.11 只在GCN部分增加了边的权重的使用
+# - name: "任务4.12 YOLO11m-SPAR-v4 1024 使用预训练权重 配置同4.11 只在GCN部分增加了边的权重的使用"
+#   command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/YOLO-OV/No4_run_12.py"
+
+# - name: "任务4.12结果-指标计算" # 主日志位置 /userhome/lhf/Codes/WorkSpace/VisDrone/logs/TaskFlow_full_20250604_214654.log
+#   command: "python /userhome/lhf/Codes/Tools/evaluateTools/No2_get_Metric.py --model_path '/userhome/lhf/Codes/WorkSpace/VisDrone/results/yolo11m-SPAR-v4-1024'"
+
+# ### 排队 重新跑 没有预训练的版本 用于横向对比，改进模块专用
+# - name: "任务4.03 不带预训练权重重跑"
+#   command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No4_run_03_noPre.py"
+
+# - name: "任务4.06 不带预训练权重重跑"
+#   command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No4_run_06_noPre.py"
+
+# - name: "任务4.09 不带预训练权重重跑"
+  # command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No4_run_09_noPre.py"
+
+# - name: "任务4.10 不带预训练权重重跑"
+#   command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No4_run_10_noPre.py"
+
+# - name: "任务4.11 不带预训练权重重跑"
+#   command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No4_run_11_noPre.py"
+
+# - name: "任务4.13 YOLO11m-SPAR-v5 1024 不使用预训练权重 配置同4.11-noPre 相似度reverse试一下"
+#   command: "CUDA_VISIBLE_DEVICES=6,7 && python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No4_run_13_noPre.py"
+#   ## 这个任务4.13 完事了之后 手动改代码，增加边的权重，看效果。
+
+
+## ===================== 2025年6月6日 训练任务 ========================
+# - name: "任务5.01 摆烂计划-1 yolo11m-hyper-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_01.py"
+
+# #yolo11m-MAN-1024
+# - name: "任务5.02 摆烂计划-2 yolo11m-MAN-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_02.py"
+
+# #hyper-yolom-1024
+# - name: "任务5.03 摆烂计划-3 hyper-yolom-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_03.py"
+
+# #yolo11m-C3k2-DSAN-1024
+# - name: "任务5.04 摆烂计划-4 yolo11m-C3k2-DSAN-1024" # 
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_04.py"
+
+# #yolo11m-C2TSSA-DYT-Mona-1024
+# - name: "任务5.05 摆烂计划-5 yolo11m-C2TSSA-DYT-Mona-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_05.py"
+
+## ===================== 2025年6月7日 训练任务 ========================
+# /userhome/lhf/Codes/WorkSpace/VisDrone/logs/TaskFlow_full_20250607_161112.log
+# userhome/lhf/Codes/WorkSpace/VisDrone/logs/TaskFlow_full_20250607_154516.log
+# 任务5.04 重新跑
+
+# #YOLO11m-C2TSSA-DYT-Mona-EDFFN-1024
+# - name: "任务5.06 YOLO11m-C2TSSA-DYT-Mona-EDFFN-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_06.py"
+
+# #YOLO11m-C2TSSA-DYT-Mona-SEFFN
+# - name: "任务5.07 YOLO11m-C2TSSA-DYT-Mona-SEFFN-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_07.py"
+
+#YOLO12m-A2C2f-DFFN-DYT-Mona
+# - name: "任务5.08 YOLO12m-A2C2f-DFFN-DYT-Mona-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_08.py"
+# ## 显存需求大，需要降低bs重新跑
+
+
+# #YOLO11m-C3k2-LSBlock-1024
+# # - name: "任务5.09 YOLO11m-C3k2-LSBlock-1024" # 
+#   # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_09.py"
+
+# #YOLO11m-lsnet-t-1024
+# # - name: "任务5.10 YOLO11m-lsnet-t-1024" # 
+#   # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_10.py"
+
+# #YOLO11m-lsnet-b-1024
+# - name: "任务5.11 YOLO11m-lsnet-b-1024" # 
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_11.py"
+
+# #YOLO11m-C3k2-LSBlock-C2PSA-Pro-1024
+# # 这个是融合了 任务06 和 09 的改进模块，看会不会有更好的效果
+# - name: "任务5.12 YOLO11m-C3k2-LSBlock-C2PSA-Pro-1024" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_12.py"
+
+# # 测试 C2TSSA-DYT-Mona-EDFFN 结合 SPAR 看效果
+# #YOLO11m-SPAR-C2PSAPro-1024
+# - name: "任务5.13 YOLO11m-SPAR-C2PSAPro-1024" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_13.py"
+
+#yolo11m-SPAR-C2PSAPro+C3k2LSB-1024
+# - name: "任务5.14 YOLO11m-SPAR-C2PSAPro+C3k2LSB-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_14.py"
+
+#YOLO11m-DRBNCSPELAN-1024
+# - name: "任务5.15 YOLO11m-DRBNCSPELAN-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_15.py"
+
+#YOLO11m-SOEP-RFPN-1024
+# # - name: "任务5.16 YOLO11m-SOEP-RFPN-1024 降低Bs重跑-二次" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_16.py"
+
+#YOLO11m-RFPN-1024
+# - name: "任务5.17 YOLO11m-RFPN-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_17.py"
+
+# /userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11-FCM.yaml
+#YOLO11m-FCM-1024
+# - name: "任务5.18 YOLO11m-FCM-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-FCM.yaml'"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11-C3k2-FasterSFSC.yaml
+#YOLO11m-C3k2-FasterSFSC-1024
+# - name: "任务5.19 YOLO11m-C3k2-FasterSFSC-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-C3k2-FasterSFSC.yaml'"
+
+#yolo11-C3k2-MambaOut-SFSC.yaml
+#YOLO11m-C3k2-MambaOut-SFSC-1024
+# - name: "任务5.20 YOLO11m-C3k2-MambaOut-SFSC-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-C3k2-MambaOut-SFSC.yaml'"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11-C3k2-GroupMamba.yaml
+#YOLO11m-C3k2-GroupMamba-1024
+# - name: "任务5.21 YOLO11m-C3k2-GroupMamba-1024" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-C3k2-GroupMamba.yaml'"
+
+#3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11-SOEP-RFPN-MFM.yaml
+#YOLO11m-SOEP-RFPN-MFM-1024
+# - name: "任务5.22 YOLO11m-SOEP-RFPN-MFM-1024" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-SOEP-RFPN-MFM.yaml' --batch 8 --amp_false"
+
+# #/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11-FCM-Pro.yaml
+# #YOLO11m-FCM-Pro-1024
+# # 自己该的模型，想要测试一下 FCM 的策略如果保持原本的 P3, P4, P5 提升是什么样的  
+# - name: "任务5.23 YOLO11m-FCM-Pro-1024"
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-FCM-Pro.yaml'" 
+
+# #/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11-SOEP-MFM.yaml
+# #YOLO11m-SOEP-MFM-1024
+# - name: "任务5.24 YOLO11m-SOEP-MFM-1024"
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-SOEP-MFM.yaml' --batch 8 --amp_false"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250612/ultralytics/cfg/models/11/yolo11m-SOEP-RFPN-Pro.yaml
+#YOLO11m-SOEP-RFPN-Pro-1024 还有问题，可能还需要调试
+
+#/userhome/lhf/Codes/3rdparty/Analogical-Reasoning/Analogical/ultralytics/cfg/models/11/yolo11m-spar.yaml
+#YOLO11m-SPAR-1024
+# - name: "任务5.25 YOLO11m-SPAR-1024 精度对齐" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/Analogical-Reasoning/Analogical/ultralytics/cfg/models/11/yolo11m-spar.yaml' --ultralytics_type SPAR"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11-SPAR.yaml
+# #YOLO11m-SPAR-1024-2
+# - name: "任务5.26 YOLO11m-SPAR-1024-2 精度对齐 ultralytics 复现 -exist=False" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11m-SPAR.yaml' --ultralytics_type ultralytics --YOLO_type SPARYOLO --use_deterministic_false"
+
+# - name: "任务5.27 YOLO11m-SPAR-1024-3 精度对齐 ProModel-20250601 复现" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11m-SPAR.yaml' --ultralytics_type ProModel-20250601 --YOLO_type SPARYOLO --use_deterministic_false"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11-SPAR-C2PSAPro.yaml
+#YOLO11m-SPAR-C2PSAPro-2-1024
+# - name: "任务5.28 YOLO11m-SPAR-C2PSAPro-2-1024 精度对齐 ProModel-20250601- 降低batch-size重新开始" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11m-SPAR-C2PSAPro.yaml' --ultralytics_type ProModel-20250601 --YOLO_type SPARYOLO --use_deterministic_false --batch 8"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11-SPAR-SOEP-MFM.yaml
+#YOLO11m-SPAR-SOEP-MFM-1024
+# - name: "任务5.29 YOLO11m-SPAR-SOEP-RFPN-1024 库 ProModel-20250601 + 调参" #
+#   command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/Pro/yolo11m-SPAR-SOEP-RFPN.yaml' --ultralytics_type ProModel-20250601 --YOLO_type SPARYOLO --use_deterministic_false --amp_false --device '4,5,6,7' "
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11-hyper-MFM.yaml
+#YOLO11m-hyper-MFM-1024
+# - name: "任务5.30 YOLO11m-hyper-MFM-1024 库 ProModel-20250601 默认" # 这个 用超参数1 好像不收敛？ 这个超参数调一下 TODO！！！！！！！！！！！！！！！ 换了学习率还是不收敛 换默认的试一下
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11m-hyper-MFM.yaml' --ultralytics_type ProModel-20250601 --YOLO_type YOLO "
+
+#3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11-C3k2-RCB.yaml
+#YOLO11m-C3k2-RCB-1024
+# - name: "任务5.31 YOLO11m-C3k2-RCB-1024 库 ProModel-20250601 + 调参" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11m-C3k2-RCB.yaml' --ultralytics_type ProModel-20250601 --YOLO_type YOLO "
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11-MFMMAFPN.yaml
+#YOLO11m-MFMMAFPN-1024
+# - name: "任务5.32 YOLO11m-MFMMAFPN-1024 库 ProModel-20250601 + 调参" # 没有调试 不一定能跑
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11m-MFMMAFPN.yaml' --ultralytics_type ProModel-20250601 --YOLO_type YOLO "
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11-MBSMFFPN.yaml
+#YOLO11m-MBSMFFPN-1024
+# - name: "任务5.33 YOLO11m-MBSMFFPN-1024 库 ProModel-20250601 + 调参" # 没有调试 不一定能跑 
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11m-MBSMFFPN.yaml' --ultralytics_type ProModel-20250601 --YOLO_type YOLO "
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11-C2PSA-DYT.yaml
+#YOLO11m-C2PSA-DYT-1024
+# - name: "任务5.34 YOLO11m-C2PSA-DYT-1024 库 ProModel-20250601 + 调参" # 没有调试 不一定能跑 
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11m-C2PSA-DYT.yaml' --ultralytics_type ProModel-20250601 --YOLO_type YOLO "
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/yolov13/ultralytics/cfg/models/v13/yolov13.yaml
+#YOLO13m-1024
+# - name: "任务5.35 YOLO13l-1024 库 yolov13 + 默认参数" # # 说动用0,1,2,3 四张卡跑 参数配置1 不收敛
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/yolov13/ultralytics/cfg/models/v13/yolov13l.yaml' --ultralytics_type yolov13 --YOLO_type YOLO --device '0,1,2,3'"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/yolov13/ultralytics/cfg/models/Pro/yolo11l-HyperACE.yaml
+#YOLO11m-HyperACE-1024
+# - name: "任务5.36 YOLO11m-HyperACE-1024 库 yolov13 + 默认参数" # 指标很低
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_18.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/yolov13/ultralytics/cfg/models/Pro/yolo11l-HyperACE.yaml' --ultralytics_type yolov13 --YOLO_type YOLO --device '4,5,6,7'"
+
+# - name: "任务5.37 YOLO11m-HyperACE-1024 库 yolov13 + 参数1" # 不收敛
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/yolov13/ultralytics/cfg/models/Pro/yolo11l-HyperACE.yaml' --ultralytics_type yolov13 --YOLO_type YOLO --device '4,5,6,7'"
+
+#/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11-MutilBackbone-MSGA.yaml
+#YOLO11m-MutilBackbone-MSGA-1024
+# - name: "任务5.38 YOLO11m-MutilBackbone-MSGA-1024 库 ProModel-20250601 + 调参" #
+  # command: "python /userhome/lhf/Codes/WorkSpace/VisDrone/noPre/No5_run_noPre_19.py --model_yaml '/userhome/lhf/Codes/3rdparty/ProModelZoo/ultralytics-yolo11-20250601/ultralytics/cfg/models/11/yolo11m-MutilBackbone-MSGA.yaml' --ultralytics_type ProModel-20250601 --YOLO_type YOLO "
