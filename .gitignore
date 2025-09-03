@@ -1,5 +1,8 @@
 runs/
 usage/
+code/val/asset
+code/val/result
+
 
 # 权重文件
 weights/
