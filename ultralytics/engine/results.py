@@ -1022,30 +1022,44 @@ class Boxes(BaseTensor):
         return self.data[:, -3] if self.is_track else None
 
     @property
-    def is_track_pre(self) -> Optional[Union[torch.Tensor, np.ndarray]]:
+    def is_track_pre(self) -> Union[torch.Tensor, np.ndarray]:
         """
-        Return the tracking prediction flags for each detection box if available.
+        Return the tracking prediction flags for each detection box.
 
         Returns:
-            (torch.Tensor | np.ndarray | None): A tensor or array containing boolean flags indicating
-                which boxes are tracking predictions (True) vs actual detections (False). Returns None
-                if tracking prediction information is not available. Shape is (N,) where N is the number of boxes.
+            (torch.Tensor | np.ndarray): A tensor or array containing boolean flags indicating
+                which boxes are tracking predictions (True) vs actual detections (False). Returns
+                an empty tensor/array if there are no boxes, or a tensor of False values if tracking
+                prediction information is not available but boxes exist. Shape is (N,) where N is
+                the number of boxes.
 
         Examples:
             >>> results = model.track("path/to/video.mp4")
             >>> for result in results:
             ...     boxes = result.boxes
-            ...     if hasattr(boxes, '_is_track_pre') and boxes._is_track_pre is not None:
+            ...     if boxes is not None:
             ...         pred_flags = boxes.is_track_pre
             ...         print(f"Prediction flags: {pred_flags}")
-            ...     else:
-            ...         print("Tracking prediction information not available.")
 
         Notes:
-            - This property is only available when tracking prediction information has been explicitly set.
+            - This property behaves consistently with other box properties when no data is available.
             - True indicates the box is a tracking prediction, False indicates it's an actual detection.
+            - Returns empty tensor/array when no boxes exist.
+            - Returns False for all boxes when no tracking prediction information is available.
         """
-        return getattr(self, '_is_track_pre', None)
+        _is_track_pre = getattr(self, '_is_track_pre', None)
+        
+        if _is_track_pre is not None:
+            return _is_track_pre
+        
+        # Get the number of boxes
+        num_boxes = len(self.data)
+        
+        # Return tensor/array with same type as data
+        if isinstance(self.data, torch.Tensor):
+            return torch.full((num_boxes,), False, dtype=torch.bool, device=self.data.device)
+        else:
+            return np.full(num_boxes, False, dtype=bool)
 
     @property
     @lru_cache(maxsize=2)
@@ -1159,9 +1173,9 @@ class Boxes(BaseTensor):
         
         new_is_track_pre = None
         if hasattr(self, '_is_track_pre') and self._is_track_pre is not None:
-            new_is_track_pre = self._is_track_pre.numpy()
+            new_is_track_pre = self._is_track_pre.cpu().numpy()
         
-        return self.__class__(self.data.numpy(), self.orig_shape, new_is_track_pre)
+        return self.__class__(self.data.cpu().numpy(), self.orig_shape, new_is_track_pre)
 
     def cuda(self):
         """
