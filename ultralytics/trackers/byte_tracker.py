@@ -11,6 +11,9 @@ from .utils import matching
 from .utils.kalman_filter import KalmanFilterXYAH
 
 
+from ultralytics.utils import DEFAULT_CFG
+DISPLAY_FRAMES = getattr(DEFAULT_CFG, 'lost_display_frames', 5)  # 如果配置项不存在，则使用5作为默认值
+
 class STrack(BaseTrack):
     """
     Single object tracking representation that uses Kalman filtering for state estimation.
@@ -20,6 +23,7 @@ class STrack(BaseTrack):
 
     Attributes:
         shared_kalman (KalmanFilterXYAH): Shared Kalman filter used across all STrack instances for prediction.
+        lost_display_counter (dict): Class-level dictionary to track remaining display frames for lost tracks.
         _tlwh (np.ndarray): Private attribute to store top-left corner coordinates and width and height of bounding box.
         kalman_filter (KalmanFilterXYAH): Instance of Kalman filter used for this particular object track.
         mean (np.ndarray): Mean state estimate vector.
@@ -50,6 +54,7 @@ class STrack(BaseTrack):
     """
 
     shared_kalman = KalmanFilterXYAH()
+    lost_display_counter = {}  # 类级别属性，存储lost状态跟踪目标的显示计数器
 
     def __init__(self, xywh: List[float], score: float, cls: Any):
         """
@@ -150,6 +155,10 @@ class STrack(BaseTrack):
         self.cls = new_track.cls
         self.angle = new_track.angle
         self.idx = new_track.idx
+        
+        # 当目标重新激活时，从lost显示计数器中移除
+        if self.track_id in STrack.lost_display_counter:
+            del STrack.lost_display_counter[self.track_id]
 
     def update(self, new_track: "STrack", frame_id: int):
         """
@@ -208,6 +217,40 @@ class STrack(BaseTrack):
         ret[:2] += ret[2:] / 2
         ret[2] /= ret[3]
         return ret
+
+    def mark_lost(self, display_frames: int = DISPLAY_FRAMES):
+        """
+        Mark the track as lost and add it to the lost display counter.
+        
+        Args:
+            display_frames (int, optional): Number of frames to continue displaying the lost track's prediction.
+                                          If None, uses value from default.yaml config.
+        """
+        print(f"DISPLAY_FRAMES in mark_lost: {display_frames}")
+            
+            
+        self.state = TrackState.Lost
+        # 当目标首次被标记为lost时，将其加入显示计数器
+        if self.track_id not in STrack.lost_display_counter:
+            STrack.lost_display_counter[self.track_id] = display_frames
+
+    @staticmethod
+    def update_lost_display_counters():
+        """Update the lost display counters by decrementing them and removing expired ones."""
+        expired_ids = []
+        for track_id in STrack.lost_display_counter:
+            STrack.lost_display_counter[track_id] -= 1
+            if STrack.lost_display_counter[track_id] <= 0:
+                expired_ids.append(track_id)
+        
+        # 移除过期的计数器
+        for track_id in expired_ids:
+            del STrack.lost_display_counter[track_id]
+
+    @staticmethod
+    def should_display_lost_track(track_id: int) -> bool:
+        """Check if a lost track should still be displayed."""
+        return track_id in STrack.lost_display_counter and STrack.lost_display_counter[track_id] > 0
 
     @property
     def xywh(self) -> np.ndarray:
@@ -381,7 +424,7 @@ class BYTETracker:
                 # 保存即将变为Lost的轨迹（此时还包含预测位置）
                 newly_lost_tracks.append(track)
 
-                track.mark_lost()
+                track.mark_lost()  # 使用新的mark_lost方法
                 lost_stracks.append(track)
         # Deal with unconfirmed tracks, usually tracks with only one beginning frame
         detections = [detections[i] for i in u_detection]
@@ -418,24 +461,27 @@ class BYTETracker:
         if len(self.removed_stracks) > 1000:
             self.removed_stracks = self.removed_stracks[-999:]  # clip remove stracks to 1000 maximum
         
-        # 在返回结果时包含新丢失的轨迹
+        # 更新lost显示计数器
+        STrack.update_lost_display_counters()
+        
+        # 在返回结果时包含活跃的跟踪目标
         active_results = []
         for x in self.tracked_stracks:
             if x.is_activated:
                 active_results.append(x.result)
         
-        # # 添加新丢失轨迹的预测结果，但重新分配索引
+        # 添加应该继续显示的lost轨迹的预测结果
         lost_prediction_results = []
-        for track in newly_lost_tracks:
-            # 使用预测位置（已经通过multi_predict更新）
-            lost_prediction_results.append(track.result)
+        for track in self.lost_stracks:
+            if STrack.should_display_lost_track(track.track_id):
+                lost_prediction_results.append(track.result)
         
-        # # 合并结果
-        all_results = active_results + lost_prediction_results
+        # 添加新丢失轨迹的预测结果
+        for track in newly_lost_tracks:
+            if STrack.should_display_lost_track(track.track_id):
+                lost_prediction_results.append(track.result)
         
         return np.asarray(active_results, dtype=np.float32), np.asarray(lost_prediction_results, dtype=np.float32)
-        # # return np.asarray(all_results, dtype=np.float32)
-        # return np.asarray([x.result for x in self.tracked_stracks if x.is_activated], dtype=np.float32)
 
     def get_kalmanfilter(self) -> KalmanFilterXYAH:
         """Return a Kalman filter object for tracking bounding boxes using KalmanFilterXYAH."""
@@ -462,6 +508,8 @@ class BYTETracker:
     def reset_id():
         """Reset the ID counter for STrack instances to ensure unique track IDs across tracking sessions."""
         STrack.reset_id()
+        # 同时清空lost显示计数器
+        STrack.lost_display_counter.clear()
 
     def reset(self):
         """Reset the tracker by clearing all tracked, lost, and removed tracks and reinitializing the Kalman filter."""
@@ -471,6 +519,8 @@ class BYTETracker:
         self.frame_id = 0
         self.kalman_filter = self.get_kalmanfilter()
         self.reset_id()
+        # 清空lost显示计数器
+        STrack.lost_display_counter.clear()
 
     @staticmethod
     def joint_stracks(tlista: List[STrack], tlistb: List[STrack]) -> List[STrack]:
