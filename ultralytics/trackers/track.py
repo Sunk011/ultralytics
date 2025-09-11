@@ -136,15 +136,18 @@ def on_predict_postprocess_end(predictor: object, persist: bool = False) -> None
         
         # 拼接tracks和lost_tmp数据（除了最后一列索引）
         combined_data = []
+        is_track_pre_flags = []  # 添加跟踪预测标识
         
         # 添加正常跟踪数据
         if len(tracks) > 0:
             combined_data.append(tracks[:, :-1])  # 排除最后一列索引
+            is_track_pre_flags.extend([False] * len(tracks))  # 正常跟踪为False
             print(f"tracks[:, :-1]: {tracks[:, :-1]}")
         
         # 添加丢失预测数据
         if len(lost_tmp) > 0:
             combined_data.append(lost_tmp[:, :-1])  # 排除最后一列索引
+            is_track_pre_flags.extend([True] * len(lost_tmp))  # 丢失预测为True
             print(f"lost_tmp[:, :-1]: {lost_tmp[:, :-1]}")
         
         # 执行拼接
@@ -161,8 +164,33 @@ def on_predict_postprocess_end(predictor: object, persist: bool = False) -> None
         # 更新检测结果
         print(f"predictor.results[{i}].boxes: {predictor.results[i].boxes.data if hasattr(predictor.results[i], 'boxes') and predictor.results[i].boxes is not None else 'None'}")
         print(f"predictor.results[{i}].id: {predictor.results[i].boxes.id if hasattr(predictor.results[i], 'boxes') and predictor.results[i].boxes is not None else 'None'}")
-        update_args = {"obb" if is_obb else "boxes": torch.as_tensor(all_tracks)}
-        predictor.results[i].update(**update_args)
+        
+        # 创建is_track_pre数组并更新检测结果
+        if len(is_track_pre_flags) > 0:
+            is_track_pre_tensor = torch.tensor(is_track_pre_flags, dtype=torch.bool)
+            update_args = {"obb" if is_obb else "boxes": torch.as_tensor(all_tracks)}
+            
+            # 先更新boxes
+            predictor.results[i].update(**update_args)
+            
+            # 然后为boxes设置is_track_pre属性
+            if hasattr(predictor.results[i], 'boxes') and predictor.results[i].boxes is not None:
+                from ultralytics.engine.results import Boxes, OBB
+                if is_obb:
+                    # 对于OBB任务，如果需要支持is_track_pre，这里需要类似的处理
+                    pass  # OBB类的is_track_pre支持可以后续添加
+                else:
+                    # 重新创建Boxes对象，传入is_track_pre参数
+                    predictor.results[i].boxes = Boxes(
+                        torch.as_tensor(all_tracks), 
+                        predictor.results[i].boxes.orig_shape, 
+                        is_track_pre_tensor
+                    )
+                    print(f"Set is_track_pre flags: {predictor.results[i].boxes.is_track_pre}")
+        else:
+            update_args = {"obb" if is_obb else "boxes": torch.as_tensor(all_tracks)}
+            predictor.results[i].update(**update_args)
+        
         print(f"updated predictor.results[{i}].boxes: {predictor.results[i].boxes.data if hasattr(predictor.results[i], 'boxes') and predictor.results[i].boxes is not None else 'None'}")
         print(f"updated predictor.results[{i}].id: {predictor.results[i].boxes.id if hasattr(predictor.results[i], 'boxes') and predictor.results[i].boxes is not None else 'None'}")
 

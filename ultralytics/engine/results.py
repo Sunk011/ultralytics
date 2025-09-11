@@ -865,6 +865,8 @@ class Boxes(BaseTensor):
         data (torch.Tensor | np.ndarray): The raw tensor containing detection boxes and associated data.
         orig_shape (Tuple[int, int]): The original image dimensions (height, width).
         is_track (bool): Indicates whether tracking IDs are included in the box data.
+        is_track_pre (torch.Tensor | np.ndarray | None): Optional boolean flags indicating which boxes are
+            tracking predictions (True) vs actual detections (False). None if not explicitly set.
         xyxy (torch.Tensor | np.ndarray): Boxes in [x1, y1, x2, y2] format.
         conf (torch.Tensor | np.ndarray): Confidence scores for each box.
         cls (torch.Tensor | np.ndarray): Class labels for each box.
@@ -888,9 +890,14 @@ class Boxes(BaseTensor):
         >>> print(boxes.conf)
         >>> print(boxes.cls)
         >>> print(boxes.xywhn)
+        
+        # Example with tracking prediction flags
+        >>> is_pred = torch.tensor([False, True])  # Second box is a prediction
+        >>> boxes_with_pred = Boxes(boxes_data, orig_shape, is_pred)
+        >>> print(boxes_with_pred.is_track_pre)  # tensor([False, True])
     """
 
-    def __init__(self, boxes: Union[torch.Tensor, np.ndarray], orig_shape: Tuple[int, int]) -> None:
+    def __init__(self, boxes: Union[torch.Tensor, np.ndarray], orig_shape: Tuple[int, int], is_track_pre: Optional[Union[torch.Tensor, np.ndarray]] = None) -> None:
         """
         Initialize the Boxes class with detection box data and the original image shape.
 
@@ -903,11 +910,14 @@ class Boxes(BaseTensor):
                 (num_boxes, 6) or (num_boxes, 7). Columns should contain
                 [x1, y1, x2, y2, confidence, class, (optional) track_id].
             orig_shape (Tuple[int, int]): The original image shape as (height, width). Used for normalization.
+            is_track_pre (torch.Tensor | np.ndarray | None): Optional tensor indicating which boxes are tracking
+                predictions. Should have shape (num_boxes,) with boolean values. None if not used.
 
         Attributes:
             data (torch.Tensor): The raw tensor containing detection boxes and their associated data.
             orig_shape (Tuple[int, int]): The original image size, used for normalization.
             is_track (bool): Indicates whether tracking IDs are included in the box data.
+            is_track_pre (torch.Tensor | np.ndarray | None): Indicates which boxes are tracking predictions.
 
         Examples:
             >>> import torch
@@ -924,6 +934,16 @@ class Boxes(BaseTensor):
         super().__init__(boxes, orig_shape)
         self.is_track = n == 7
         self.orig_shape = orig_shape
+        
+        # 设置 is_track_pre 属性，仅在明确提供时设置
+        if is_track_pre is not None:
+            if isinstance(boxes, torch.Tensor):
+                self._is_track_pre = torch.as_tensor(is_track_pre, dtype=torch.bool, device=boxes.device)
+            else:
+                self._is_track_pre = np.asarray(is_track_pre, dtype=bool)
+            assert len(self._is_track_pre) == len(boxes), f"is_track_pre length {len(self._is_track_pre)} must match boxes length {len(boxes)}"
+        else:
+            self._is_track_pre = None
 
     @property
     def xyxy(self) -> Union[torch.Tensor, np.ndarray]:
@@ -1002,6 +1022,32 @@ class Boxes(BaseTensor):
         return self.data[:, -3] if self.is_track else None
 
     @property
+    def is_track_pre(self) -> Optional[Union[torch.Tensor, np.ndarray]]:
+        """
+        Return the tracking prediction flags for each detection box if available.
+
+        Returns:
+            (torch.Tensor | np.ndarray | None): A tensor or array containing boolean flags indicating
+                which boxes are tracking predictions (True) vs actual detections (False). Returns None
+                if tracking prediction information is not available. Shape is (N,) where N is the number of boxes.
+
+        Examples:
+            >>> results = model.track("path/to/video.mp4")
+            >>> for result in results:
+            ...     boxes = result.boxes
+            ...     if hasattr(boxes, '_is_track_pre') and boxes._is_track_pre is not None:
+            ...         pred_flags = boxes.is_track_pre
+            ...         print(f"Prediction flags: {pred_flags}")
+            ...     else:
+            ...         print("Tracking prediction information not available.")
+
+        Notes:
+            - This property is only available when tracking prediction information has been explicitly set.
+            - True indicates the box is a tracking prediction, False indicates it's an actual detection.
+        """
+        return getattr(self, '_is_track_pre', None)
+
+    @property
     @lru_cache(maxsize=2)
     def xywh(self) -> Union[torch.Tensor, np.ndarray]:
         """
@@ -1070,6 +1116,133 @@ class Boxes(BaseTensor):
         xywh[..., [0, 2]] /= self.orig_shape[1]
         xywh[..., [1, 3]] /= self.orig_shape[0]
         return xywh
+
+    def cpu(self):
+        """
+        Return a copy of the Boxes object with all tensors on CPU memory.
+
+        Returns:
+            (Boxes): A new Boxes object with the data tensor moved to CPU memory and 
+                is_track_pre properly handled.
+
+        Examples:
+            >>> boxes = Boxes(torch.tensor([[100, 50, 150, 100, 0.9, 0]]).cuda(), orig_shape=(480, 640))
+            >>> cpu_boxes = boxes.cpu()
+            >>> print(cpu_boxes.data.device)
+            device(type='cpu')
+        """
+        if isinstance(self.data, np.ndarray):
+            return self
+        
+        new_is_track_pre = None
+        if hasattr(self, '_is_track_pre') and self._is_track_pre is not None:
+            new_is_track_pre = self._is_track_pre.cpu()
+        
+        return self.__class__(self.data.cpu(), self.orig_shape, new_is_track_pre)
+
+    def numpy(self):
+        """
+        Return a copy of the Boxes object with all tensors as numpy arrays.
+
+        Returns:
+            (Boxes): A new Boxes object with the data as numpy arrays and 
+                is_track_pre properly handled.
+
+        Examples:
+            >>> boxes = Boxes(torch.tensor([[100, 50, 150, 100, 0.9, 0]]), orig_shape=(480, 640))
+            >>> numpy_boxes = boxes.numpy()
+            >>> print(type(numpy_boxes.data))
+            <class 'numpy.ndarray'>
+        """
+        if isinstance(self.data, np.ndarray):
+            return self
+        
+        new_is_track_pre = None
+        if hasattr(self, '_is_track_pre') and self._is_track_pre is not None:
+            new_is_track_pre = self._is_track_pre.numpy()
+        
+        return self.__class__(self.data.numpy(), self.orig_shape, new_is_track_pre)
+
+    def cuda(self):
+        """
+        Move the Boxes object to GPU memory.
+
+        Returns:
+            (Boxes): A new Boxes instance with the data moved to GPU memory and 
+                is_track_pre properly handled.
+
+        Examples:
+            >>> boxes = Boxes(torch.tensor([[100, 50, 150, 100, 0.9, 0]]), orig_shape=(480, 640))
+            >>> gpu_boxes = boxes.cuda()
+            >>> print(gpu_boxes.data.device)
+            cuda:0
+        """
+        new_is_track_pre = None
+        if hasattr(self, '_is_track_pre') and self._is_track_pre is not None:
+            new_is_track_pre = torch.as_tensor(self._is_track_pre).cuda()
+        
+        return self.__class__(torch.as_tensor(self.data).cuda(), self.orig_shape, new_is_track_pre)
+
+    def to(self, *args, **kwargs):
+        """
+        Return a copy of the Boxes object with tensors on specified device and dtype.
+
+        Args:
+            *args (Any): Variable length argument list to be passed to torch.Tensor.to().
+            **kwargs (Any): Arbitrary keyword arguments to be passed to torch.Tensor.to().
+
+        Returns:
+            (Boxes): A new Boxes instance with the data moved to the specified device/dtype and 
+                is_track_pre properly handled.
+
+        Examples:
+            >>> boxes = Boxes(torch.tensor([[100, 50, 150, 100, 0.9, 0]]), orig_shape=(480, 640))
+            >>> cuda_boxes = boxes.to("cuda")
+            >>> float16_boxes = boxes.to(dtype=torch.float16)
+        """
+        new_is_track_pre = None
+        if hasattr(self, '_is_track_pre') and self._is_track_pre is not None:
+            new_is_track_pre = torch.as_tensor(self._is_track_pre).to(*args, **kwargs)
+        
+        return self.__class__(torch.as_tensor(self.data).to(*args, **kwargs), self.orig_shape, new_is_track_pre)
+
+    def __getitem__(self, idx):
+        """
+        Return a new Boxes object with filtered boxes based on the given index.
+
+        Args:
+            idx: Index or slice to filter the boxes.
+
+        Returns:
+            (Boxes): A new Boxes object containing the filtered boxes and corresponding is_track_pre values.
+
+        Examples:
+            >>> boxes = Boxes(torch.tensor([[100, 50, 150, 100, 0.9, 0], [200, 100, 250, 150, 0.8, 1]]), orig_shape=(480, 640))
+            >>> first_box = boxes[0]
+            >>> print(first_box.data)
+            tensor([[100.,  50., 150., 100.,   0.9,   0.]])
+        """
+        new_is_track_pre = None
+        if hasattr(self, '_is_track_pre') and self._is_track_pre is not None:
+            indexed_is_track_pre = self._is_track_pre[idx]
+            # 确保索引结果至少是1维的
+            if isinstance(indexed_is_track_pre, (torch.Tensor, np.ndarray)):
+                if hasattr(indexed_is_track_pre, 'ndim') and indexed_is_track_pre.ndim == 0:
+                    # 对于0维tensor/array，转换为1维
+                    if isinstance(indexed_is_track_pre, torch.Tensor):
+                        new_is_track_pre = indexed_is_track_pre.unsqueeze(0)
+                    else:
+                        new_is_track_pre = np.array([indexed_is_track_pre])
+                else:
+                    new_is_track_pre = indexed_is_track_pre
+            else:
+                # 对于标量值，转换为1维
+                if isinstance(self._is_track_pre, torch.Tensor):
+                    new_is_track_pre = torch.tensor([indexed_is_track_pre], dtype=torch.bool)
+                else:
+                    new_is_track_pre = np.array([indexed_is_track_pre], dtype=bool)
+        
+        return self.__class__(self.data[idx], self.orig_shape, new_is_track_pre)
 
 
 class Masks(BaseTensor):
