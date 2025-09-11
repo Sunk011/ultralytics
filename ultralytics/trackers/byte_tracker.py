@@ -302,6 +302,8 @@ class BYTETracker:
         lost_stracks = []
         removed_stracks = []
 
+        lost_temp = []
+
         scores = results.conf
         bboxes = results.xywhr if hasattr(results, "xywhr") else results.xywh
         # Add index
@@ -370,9 +372,15 @@ class BYTETracker:
                 track.re_activate(det, self.frame_id, new_id=False)
                 refind_stracks.append(track)
 
+            # 收集本帧新丢失的轨迹（在标记为Lost之前）
+        newly_lost_tracks = []
+
         for it in u_track:
             track = r_tracked_stracks[it]
             if track.state != TrackState.Lost:
+                # 保存即将变为Lost的轨迹（此时还包含预测位置）
+                newly_lost_tracks.append(track)
+
                 track.mark_lost()
                 lost_stracks.append(track)
         # Deal with unconfirmed tracks, usually tracks with only one beginning frame
@@ -409,8 +417,25 @@ class BYTETracker:
         self.removed_stracks.extend(removed_stracks)
         if len(self.removed_stracks) > 1000:
             self.removed_stracks = self.removed_stracks[-999:]  # clip remove stracks to 1000 maximum
-
-        return np.asarray([x.result for x in self.tracked_stracks if x.is_activated], dtype=np.float32)
+        
+        # 在返回结果时包含新丢失的轨迹
+        active_results = []
+        for x in self.tracked_stracks:
+            if x.is_activated:
+                active_results.append(x.result)
+        
+        # # 添加新丢失轨迹的预测结果，但重新分配索引
+        lost_prediction_results = []
+        for track in newly_lost_tracks:
+            # 使用预测位置（已经通过multi_predict更新）
+            lost_prediction_results.append(track.result)
+        
+        # # 合并结果
+        all_results = active_results + lost_prediction_results
+        
+        return np.asarray(active_results, dtype=np.float32), np.asarray(lost_prediction_results, dtype=np.float32)
+        # # return np.asarray(all_results, dtype=np.float32)
+        # return np.asarray([x.result for x in self.tracked_stracks if x.is_activated], dtype=np.float32)
 
     def get_kalmanfilter(self) -> KalmanFilterXYAH:
         """Return a Kalman filter object for tracking bounding boxes using KalmanFilterXYAH."""
