@@ -130,9 +130,9 @@ def on_predict_postprocess_end(predictor: object, persist: bool = False) -> None
         if len(tracks) > 0:
             idx = tracks[:, -1].astype(int)
             predictor.results[i] = result[idx]
-        else:
-            # 如果没有正常跟踪结果，跳过或创建空结果
-            continue
+        # else:
+        #     # 如果没有正常跟踪结果，跳过或创建空结果
+        #     continue
         
         # 拼接tracks和lost_tmp数据（除了最后一列索引）
         combined_data = []
@@ -154,8 +154,9 @@ def on_predict_postprocess_end(predictor: object, persist: bool = False) -> None
             print(f"Combined tracks shape: {all_tracks.shape}")
             print(f"Normal tracks: {len(tracks)}, Lost predictions: {len(lost_tmp) if len(lost_tmp) > 0 else 0}")
         else:
-            all_tracks = tracks[:, :-1]  # 如果没有lost_tmp，只使用tracks
-        tmp_tracks = tracks[:, :-1]
+            continue
+            # all_tracks = []  # 如果没有lost_tmp，只使用tracks
+        # tmp_tracks = tracks[:, :-1]
         print(f"all_tracks shape: {all_tracks.shape if len(all_tracks) > 0 else all_tracks}")
         # 更新检测结果
         print(f"predictor.results[{i}].boxes: {predictor.results[i].boxes.data if hasattr(predictor.results[i], 'boxes') and predictor.results[i].boxes is not None else 'None'}")

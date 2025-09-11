@@ -240,17 +240,18 @@ class STrack(BaseTrack):
         expired_ids = []
         for track_id in STrack.lost_display_counter:
             STrack.lost_display_counter[track_id] -= 1
-            if STrack.lost_display_counter[track_id] <= 0:
+            if STrack.lost_display_counter[track_id] < 0:
                 expired_ids.append(track_id)
         
         # 移除过期的计数器
         for track_id in expired_ids:
+            print(f"Removing track_id {track_id} from lost_display_counter")
             del STrack.lost_display_counter[track_id]
 
     @staticmethod
     def should_display_lost_track(track_id: int) -> bool:
         """Check if a lost track should still be displayed."""
-        return track_id in STrack.lost_display_counter and STrack.lost_display_counter[track_id] > 0
+        return track_id in STrack.lost_display_counter and STrack.lost_display_counter[track_id] >= 0
 
     @property
     def xywh(self) -> np.ndarray:
@@ -478,8 +479,9 @@ class BYTETracker:
         
         # 添加新丢失轨迹的预测结果
         for track in newly_lost_tracks:
-            if STrack.should_display_lost_track(track.track_id):
-                lost_prediction_results.append(track.result)
+            # if STrack.should_display_lost_track(track.track_id):
+            #     lost_prediction_results.append(track.result)
+            lost_prediction_results.append(track.result)
         
         return np.asarray(active_results, dtype=np.float32), np.asarray(lost_prediction_results, dtype=np.float32)
 
