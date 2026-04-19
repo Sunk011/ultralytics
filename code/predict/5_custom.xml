@@ -1,0 +1,3477 @@
+<?xml version="1.0" ?>
+<detection_results>
+  <image_info>
+    <filename>5.jpg</filename>
+    <path>/home/sk/project/ultralytics/code/predict/5.jpg</path>
+    <width>1920</width>
+    <height>1080</height>
+  </image_info>
+  <statistics>
+    <total_detections>182</total_detections>
+    <classes>
+      <class id="0" name="vehicle" count="177"/>
+      <class id="1" name="person" count="3"/>
+      <class id="2" name="bicycle" count="2"/>
+    </classes>
+  </statistics>
+  <detections>
+    <detection id="0">
+      <class id="0">vehicle</class>
+      <confidence>0.924941</confidence>
+      <bounding_box format="xyxy">
+        <x1>503.94</x1>
+        <y1>942.73</y1>
+        <x2>580.47</x2>
+        <y2>999.07</y2>
+      </bounding_box>
+      <center>
+        <x>542.21</x>
+        <y>970.90</y>
+      </center>
+      <size>
+        <width>76.53</width>
+        <height>56.34</height>
+        <area>4312.07</area>
+      </size>
+    </detection>
+    <detection id="1">
+      <class id="0">vehicle</class>
+      <confidence>0.917322</confidence>
+      <bounding_box format="xyxy">
+        <x1>629.20</x1>
+        <y1>854.44</y1>
+        <x2>678.49</x2>
+        <y2>900.52</y2>
+      </bounding_box>
+      <center>
+        <x>653.85</x>
+        <y>877.48</y>
+      </center>
+      <size>
+        <width>49.29</width>
+        <height>46.08</height>
+        <area>2271.56</area>
+      </size>
+    </detection>
+    <detection id="2">
+      <class id="0">vehicle</class>
+      <confidence>0.906547</confidence>
+      <bounding_box format="xyxy">
+        <x1>1279.25</x1>
+        <y1>473.82</y1>
+        <x2>1345.58</x2>
+        <y2>502.29</y2>
+      </bounding_box>
+      <center>
+        <x>1312.42</x>
+        <y>488.05</y>
+      </center>
+      <size>
+        <width>66.32</width>
+        <height>28.47</height>
+        <area>1888.41</area>
+      </size>
+    </detection>
+    <detection id="3">
+      <class id="0">vehicle</class>
+      <confidence>0.905843</confidence>
+      <bounding_box format="xyxy">
+        <x1>1051.58</x1>
+        <y1>625.56</y1>
+        <x2>1097.60</x2>
+        <y2>658.27</y2>
+      </bounding_box>
+      <center>
+        <x>1074.59</x>
+        <y>641.92</y>
+      </center>
+      <size>
+        <width>46.02</width>
+        <height>32.71</height>
+        <area>1505.11</area>
+      </size>
+    </detection>
+    <detection id="4">
+      <class id="0">vehicle</class>
+      <confidence>0.905115</confidence>
+      <bounding_box format="xyxy">
+        <x1>1067.89</x1>
+        <y1>716.41</y1>
+        <x2>1120.01</x2>
+        <y2>752.67</y2>
+      </bounding_box>
+      <center>
+        <x>1093.95</x>
+        <y>734.54</y>
+      </center>
+      <size>
+        <width>52.13</width>
+        <height>36.26</height>
+        <area>1890.10</area>
+      </size>
+    </detection>
+    <detection id="5">
+      <class id="0">vehicle</class>
+      <confidence>0.904718</confidence>
+      <bounding_box format="xyxy">
+        <x1>544.94</x1>
+        <y1>573.68</y1>
+        <x2>587.35</x2>
+        <y2>620.22</y2>
+      </bounding_box>
+      <center>
+        <x>566.15</x>
+        <y>596.95</y>
+      </center>
+      <size>
+        <width>42.42</width>
+        <height>46.54</height>
+        <area>1974.07</area>
+      </size>
+    </detection>
+    <detection id="6">
+      <class id="0">vehicle</class>
+      <confidence>0.904273</confidence>
+      <bounding_box format="xyxy">
+        <x1>555.82</x1>
+        <y1>451.39</y1>
+        <x2>597.14</x2>
+        <y2>490.13</y2>
+      </bounding_box>
+      <center>
+        <x>576.48</x>
+        <y>470.76</y>
+      </center>
+      <size>
+        <width>41.32</width>
+        <height>38.73</height>
+        <area>1600.20</area>
+      </size>
+    </detection>
+    <detection id="7">
+      <class id="0">vehicle</class>
+      <confidence>0.903498</confidence>
+      <bounding_box format="xyxy">
+        <x1>1192.58</x1>
+        <y1>780.10</y1>
+        <x2>1242.78</x2>
+        <y2>817.71</y2>
+      </bounding_box>
+      <center>
+        <x>1217.68</x>
+        <y>798.91</y>
+      </center>
+      <size>
+        <width>50.19</width>
+        <height>37.61</height>
+        <area>1887.64</area>
+      </size>
+    </detection>
+    <detection id="8">
+      <class id="0">vehicle</class>
+      <confidence>0.903231</confidence>
+      <bounding_box format="xyxy">
+        <x1>1389.45</x1>
+        <y1>1023.80</y1>
+        <x2>1452.96</x2>
+        <y2>1071.44</y2>
+      </bounding_box>
+      <center>
+        <x>1421.20</x>
+        <y>1047.62</y>
+      </center>
+      <size>
+        <width>63.51</width>
+        <height>47.64</height>
+        <area>3025.40</area>
+      </size>
+    </detection>
+    <detection id="9">
+      <class id="0">vehicle</class>
+      <confidence>0.902913</confidence>
+      <bounding_box format="xyxy">
+        <x1>992.52</x1>
+        <y1>495.77</y1>
+        <x2>1030.72</x2>
+        <y2>522.93</y2>
+      </bounding_box>
+      <center>
+        <x>1011.62</x>
+        <y>509.35</y>
+      </center>
+      <size>
+        <width>38.20</width>
+        <height>27.15</height>
+        <area>1037.22</area>
+      </size>
+    </detection>
+    <detection id="10">
+      <class id="0">vehicle</class>
+      <confidence>0.902718</confidence>
+      <bounding_box format="xyxy">
+        <x1>787.73</x1>
+        <y1>659.13</y1>
+        <x2>834.70</x2>
+        <y2>696.06</y2>
+      </bounding_box>
+      <center>
+        <x>811.21</x>
+        <y>677.59</y>
+      </center>
+      <size>
+        <width>46.97</width>
+        <height>36.93</height>
+        <area>1734.46</area>
+      </size>
+    </detection>
+    <detection id="11">
+      <class id="0">vehicle</class>
+      <confidence>0.899578</confidence>
+      <bounding_box format="xyxy">
+        <x1>222.19</x1>
+        <y1>815.51</y1>
+        <x2>257.70</x2>
+        <y2>851.46</y2>
+      </bounding_box>
+      <center>
+        <x>239.95</x>
+        <y>833.48</y>
+      </center>
+      <size>
+        <width>35.51</width>
+        <height>35.95</height>
+        <area>1276.52</area>
+      </size>
+    </detection>
+    <detection id="12">
+      <class id="0">vehicle</class>
+      <confidence>0.898874</confidence>
+      <bounding_box format="xyxy">
+        <x1>756.11</x1>
+        <y1>373.81</y1>
+        <x2>789.51</x2>
+        <y2>398.15</y2>
+      </bounding_box>
+      <center>
+        <x>772.81</x>
+        <y>385.98</y>
+      </center>
+      <size>
+        <width>33.40</width>
+        <height>24.34</height>
+        <area>812.93</area>
+      </size>
+    </detection>
+    <detection id="13">
+      <class id="0">vehicle</class>
+      <confidence>0.896903</confidence>
+      <bounding_box format="xyxy">
+        <x1>928.57</x1>
+        <y1>534.41</y1>
+        <x2>971.60</x2>
+        <y2>563.66</y2>
+      </bounding_box>
+      <center>
+        <x>950.08</x>
+        <y>549.04</y>
+      </center>
+      <size>
+        <width>43.03</width>
+        <height>29.26</height>
+        <area>1259.01</area>
+      </size>
+    </detection>
+    <detection id="14">
+      <class id="0">vehicle</class>
+      <confidence>0.896465</confidence>
+      <bounding_box format="xyxy">
+        <x1>1144.00</x1>
+        <y1>701.73</y1>
+        <x2>1196.85</x2>
+        <y2>739.29</y2>
+      </bounding_box>
+      <center>
+        <x>1170.43</x>
+        <y>720.51</y>
+      </center>
+      <size>
+        <width>52.85</width>
+        <height>37.56</height>
+        <area>1985.21</area>
+      </size>
+    </detection>
+    <detection id="15">
+      <class id="0">vehicle</class>
+      <confidence>0.895972</confidence>
+      <bounding_box format="xyxy">
+        <x1>1250.77</x1>
+        <y1>766.23</y1>
+        <x2>1300.93</x2>
+        <y2>800.13</y2>
+      </bounding_box>
+      <center>
+        <x>1275.85</x>
+        <y>783.18</y>
+      </center>
+      <size>
+        <width>50.16</width>
+        <height>33.90</height>
+        <area>1700.27</area>
+      </size>
+    </detection>
+    <detection id="16">
+      <class id="0">vehicle</class>
+      <confidence>0.895434</confidence>
+      <bounding_box format="xyxy">
+        <x1>704.83</x1>
+        <y1>378.54</y1>
+        <x2>739.99</x2>
+        <y2>402.38</y2>
+      </bounding_box>
+      <center>
+        <x>722.41</x>
+        <y>390.46</y>
+      </center>
+      <size>
+        <width>35.16</width>
+        <height>23.84</height>
+        <area>838.13</area>
+      </size>
+    </detection>
+    <detection id="17">
+      <class id="0">vehicle</class>
+      <confidence>0.894661</confidence>
+      <bounding_box format="xyxy">
+        <x1>892.71</x1>
+        <y1>412.73</y1>
+        <x2>929.52</x2>
+        <y2>438.28</y2>
+      </bounding_box>
+      <center>
+        <x>911.12</x>
+        <y>425.50</y>
+      </center>
+      <size>
+        <width>36.81</width>
+        <height>25.55</height>
+        <area>940.45</area>
+      </size>
+    </detection>
+    <detection id="18">
+      <class id="0">vehicle</class>
+      <confidence>0.893954</confidence>
+      <bounding_box format="xyxy">
+        <x1>270.70</x1>
+        <y1>650.65</y1>
+        <x2>344.11</x2>
+        <y2>678.95</y2>
+      </bounding_box>
+      <center>
+        <x>307.40</x>
+        <y>664.80</y>
+      </center>
+      <size>
+        <width>73.41</width>
+        <height>28.29</height>
+        <area>2076.81</area>
+      </size>
+    </detection>
+    <detection id="19">
+      <class id="0">vehicle</class>
+      <confidence>0.891759</confidence>
+      <bounding_box format="xyxy">
+        <x1>378.83</x1>
+        <y1>231.95</y1>
+        <x2>406.48</x2>
+        <y2>256.13</y2>
+      </bounding_box>
+      <center>
+        <x>392.65</x>
+        <y>244.04</y>
+      </center>
+      <size>
+        <width>27.65</width>
+        <height>24.18</height>
+        <area>668.63</area>
+      </size>
+    </detection>
+    <detection id="20">
+      <class id="0">vehicle</class>
+      <confidence>0.891035</confidence>
+      <bounding_box format="xyxy">
+        <x1>388.77</x1>
+        <y1>638.29</y1>
+        <x2>460.98</x2>
+        <y2>665.84</y2>
+      </bounding_box>
+      <center>
+        <x>424.88</x>
+        <y>652.07</y>
+      </center>
+      <size>
+        <width>72.21</width>
+        <height>27.55</height>
+        <area>1989.46</area>
+      </size>
+    </detection>
+    <detection id="21">
+      <class id="0">vehicle</class>
+      <confidence>0.890520</confidence>
+      <bounding_box format="xyxy">
+        <x1>379.64</x1>
+        <y1>328.01</y1>
+        <x2>410.54</x2>
+        <y2>357.31</y2>
+      </bounding_box>
+      <center>
+        <x>395.09</x>
+        <y>342.66</y>
+      </center>
+      <size>
+        <width>30.90</width>
+        <height>29.30</height>
+        <area>905.47</area>
+      </size>
+    </detection>
+    <detection id="22">
+      <class id="0">vehicle</class>
+      <confidence>0.889674</confidence>
+      <bounding_box format="xyxy">
+        <x1>1242.43</x1>
+        <y1>899.34</y1>
+        <x2>1297.45</x2>
+        <y2>938.07</y2>
+      </bounding_box>
+      <center>
+        <x>1269.94</x>
+        <y>918.71</y>
+      </center>
+      <size>
+        <width>55.02</width>
+        <height>38.73</height>
+        <area>2131.02</area>
+      </size>
+    </detection>
+    <detection id="23">
+      <class id="0">vehicle</class>
+      <confidence>0.889495</confidence>
+      <bounding_box format="xyxy">
+        <x1>72.78</x1>
+        <y1>642.41</y1>
+        <x2>147.03</x2>
+        <y2>668.87</y2>
+      </bounding_box>
+      <center>
+        <x>109.90</x>
+        <y>655.64</y>
+      </center>
+      <size>
+        <width>74.25</width>
+        <height>26.46</height>
+        <area>1964.68</area>
+      </size>
+    </detection>
+    <detection id="24">
+      <class id="0">vehicle</class>
+      <confidence>0.889146</confidence>
+      <bounding_box format="xyxy">
+        <x1>837.43</x1>
+        <y1>438.78</y1>
+        <x2>874.63</x2>
+        <y2>464.95</y2>
+      </bounding_box>
+      <center>
+        <x>856.03</x>
+        <y>451.86</y>
+      </center>
+      <size>
+        <width>37.20</width>
+        <height>26.17</height>
+        <area>973.36</area>
+      </size>
+    </detection>
+    <detection id="25">
+      <class id="0">vehicle</class>
+      <confidence>0.888942</confidence>
+      <bounding_box format="xyxy">
+        <x1>841.03</x1>
+        <y1>366.37</y1>
+        <x2>876.09</x2>
+        <y2>389.53</y2>
+      </bounding_box>
+      <center>
+        <x>858.56</x>
+        <y>377.95</y>
+      </center>
+      <size>
+        <width>35.06</width>
+        <height>23.16</height>
+        <area>812.03</area>
+      </size>
+    </detection>
+    <detection id="26">
+      <class id="0">vehicle</class>
+      <confidence>0.888519</confidence>
+      <bounding_box format="xyxy">
+        <x1>408.91</x1>
+        <y1>318.28</y1>
+        <x2>438.31</x2>
+        <y2>343.71</y2>
+      </bounding_box>
+      <center>
+        <x>423.61</x>
+        <y>330.99</y>
+      </center>
+      <size>
+        <width>29.39</width>
+        <height>25.43</height>
+        <area>747.51</area>
+      </size>
+    </detection>
+    <detection id="27">
+      <class id="0">vehicle</class>
+      <confidence>0.888497</confidence>
+      <bounding_box format="xyxy">
+        <x1>12.92</x1>
+        <y1>658.19</y1>
+        <x2>76.00</x2>
+        <y2>685.60</y2>
+      </bounding_box>
+      <center>
+        <x>44.46</x>
+        <y>671.90</y>
+      </center>
+      <size>
+        <width>63.08</width>
+        <height>27.41</height>
+        <area>1729.10</area>
+      </size>
+    </detection>
+    <detection id="28">
+      <class id="0">vehicle</class>
+      <confidence>0.888355</confidence>
+      <bounding_box format="xyxy">
+        <x1>856.65</x1>
+        <y1>517.87</y1>
+        <x2>898.86</x2>
+        <y2>548.84</y2>
+      </bounding_box>
+      <center>
+        <x>877.75</x>
+        <y>533.36</y>
+      </center>
+      <size>
+        <width>42.21</width>
+        <height>30.98</height>
+        <area>1307.40</area>
+      </size>
+    </detection>
+    <detection id="29">
+      <class id="0">vehicle</class>
+      <confidence>0.884406</confidence>
+      <bounding_box format="xyxy">
+        <x1>437.02</x1>
+        <y1>294.24</y1>
+        <x2>467.10</x2>
+        <y2>321.12</y2>
+      </bounding_box>
+      <center>
+        <x>452.06</x>
+        <y>307.68</y>
+      </center>
+      <size>
+        <width>30.08</width>
+        <height>26.89</height>
+        <area>808.75</area>
+      </size>
+    </detection>
+    <detection id="30">
+      <class id="0">vehicle</class>
+      <confidence>0.883875</confidence>
+      <bounding_box format="xyxy">
+        <x1>868.98</x1>
+        <y1>387.30</y1>
+        <x2>904.69</x2>
+        <y2>412.76</y2>
+      </bounding_box>
+      <center>
+        <x>886.84</x>
+        <y>400.03</y>
+      </center>
+      <size>
+        <width>35.71</width>
+        <height>25.46</height>
+        <area>909.23</area>
+      </size>
+    </detection>
+    <detection id="31">
+      <class id="0">vehicle</class>
+      <confidence>0.881060</confidence>
+      <bounding_box format="xyxy">
+        <x1>79.78</x1>
+        <y1>592.52</y1>
+        <x2>147.46</x2>
+        <y2>620.03</y2>
+      </bounding_box>
+      <center>
+        <x>113.62</x>
+        <y>606.28</y>
+      </center>
+      <size>
+        <width>67.68</width>
+        <height>27.51</height>
+        <area>1861.90</area>
+      </size>
+    </detection>
+    <detection id="32">
+      <class id="0">vehicle</class>
+      <confidence>0.879677</confidence>
+      <bounding_box format="xyxy">
+        <x1>513.35</x1>
+        <y1>365.14</y1>
+        <x2>549.00</x2>
+        <y2>392.74</y2>
+      </bounding_box>
+      <center>
+        <x>531.18</x>
+        <y>378.94</y>
+      </center>
+      <size>
+        <width>35.65</width>
+        <height>27.61</height>
+        <area>984.18</area>
+      </size>
+    </detection>
+    <detection id="33">
+      <class id="0">vehicle</class>
+      <confidence>0.877973</confidence>
+      <bounding_box format="xyxy">
+        <x1>1465.66</x1>
+        <y1>462.88</y1>
+        <x2>1529.41</x2>
+        <y2>488.17</y2>
+      </bounding_box>
+      <center>
+        <x>1497.54</x>
+        <y>475.53</y>
+      </center>
+      <size>
+        <width>63.75</width>
+        <height>25.29</height>
+        <area>1612.11</area>
+      </size>
+    </detection>
+    <detection id="34">
+      <class id="0">vehicle</class>
+      <confidence>0.877679</confidence>
+      <bounding_box format="xyxy">
+        <x1>282.63</x1>
+        <y1>815.34</y1>
+        <x2>316.02</x2>
+        <y2>848.87</y2>
+      </bounding_box>
+      <center>
+        <x>299.32</x>
+        <y>832.10</y>
+      </center>
+      <size>
+        <width>33.39</width>
+        <height>33.53</height>
+        <area>1119.60</area>
+      </size>
+    </detection>
+    <detection id="35">
+      <class id="0">vehicle</class>
+      <confidence>0.876494</confidence>
+      <bounding_box format="xyxy">
+        <x1>527.50</x1>
+        <y1>504.77</y1>
+        <x2>564.28</x2>
+        <y2>538.76</y2>
+      </bounding_box>
+      <center>
+        <x>545.89</x>
+        <y>521.77</y>
+      </center>
+      <size>
+        <width>36.78</width>
+        <height>33.99</height>
+        <area>1250.17</area>
+      </size>
+    </detection>
+    <detection id="36">
+      <class id="0">vehicle</class>
+      <confidence>0.876301</confidence>
+      <bounding_box format="xyxy">
+        <x1>1739.14</x1>
+        <y1>443.26</y1>
+        <x2>1798.37</x2>
+        <y2>468.93</y2>
+      </bounding_box>
+      <center>
+        <x>1768.75</x>
+        <y>456.09</y>
+      </center>
+      <size>
+        <width>59.23</width>
+        <height>25.67</height>
+        <area>1520.68</area>
+      </size>
+    </detection>
+    <detection id="37">
+      <class id="0">vehicle</class>
+      <confidence>0.875301</confidence>
+      <bounding_box format="xyxy">
+        <x1>1798.78</x1>
+        <y1>422.01</y1>
+        <x2>1853.11</x2>
+        <y2>447.02</y2>
+      </bounding_box>
+      <center>
+        <x>1825.94</x>
+        <y>434.51</y>
+      </center>
+      <size>
+        <width>54.33</width>
+        <height>25.01</height>
+        <area>1358.68</area>
+      </size>
+    </detection>
+    <detection id="38">
+      <class id="0">vehicle</class>
+      <confidence>0.873642</confidence>
+      <bounding_box format="xyxy">
+        <x1>763.30</x1>
+        <y1>307.52</y1>
+        <x2>794.24</x2>
+        <y2>329.60</y2>
+      </bounding_box>
+      <center>
+        <x>778.77</x>
+        <y>318.56</y>
+      </center>
+      <size>
+        <width>30.94</width>
+        <height>22.08</height>
+        <area>683.05</area>
+      </size>
+    </detection>
+    <detection id="39">
+      <class id="0">vehicle</class>
+      <confidence>0.872288</confidence>
+      <bounding_box format="xyxy">
+        <x1>1031.24</x1>
+        <y1>532.76</y1>
+        <x2>1070.86</x2>
+        <y2>561.71</y2>
+      </bounding_box>
+      <center>
+        <x>1051.05</x>
+        <y>547.23</y>
+      </center>
+      <size>
+        <width>39.62</width>
+        <height>28.95</height>
+        <area>1147.00</area>
+      </size>
+    </detection>
+    <detection id="40">
+      <class id="0">vehicle</class>
+      <confidence>0.871416</confidence>
+      <bounding_box format="xyxy">
+        <x1>1702.19</x1>
+        <y1>435.97</y1>
+        <x2>1759.39</x2>
+        <y2>460.37</y2>
+      </bounding_box>
+      <center>
+        <x>1730.79</x>
+        <y>448.17</y>
+      </center>
+      <size>
+        <width>57.21</width>
+        <height>24.40</height>
+        <area>1395.85</area>
+      </size>
+    </detection>
+    <detection id="41">
+      <class id="0">vehicle</class>
+      <confidence>0.871146</confidence>
+      <bounding_box format="xyxy">
+        <x1>1147.46</x1>
+        <y1>481.72</y1>
+        <x2>1215.51</x2>
+        <y2>511.58</y2>
+      </bounding_box>
+      <center>
+        <x>1181.48</x>
+        <y>496.65</y>
+      </center>
+      <size>
+        <width>68.05</width>
+        <height>29.86</height>
+        <area>2031.79</area>
+      </size>
+    </detection>
+    <detection id="42">
+      <class id="0">vehicle</class>
+      <confidence>0.868258</confidence>
+      <bounding_box format="xyxy">
+        <x1>930.89</x1>
+        <y1>430.48</y1>
+        <x2>970.06</x2>
+        <y2>464.70</y2>
+      </bounding_box>
+      <center>
+        <x>950.48</x>
+        <y>447.59</y>
+      </center>
+      <size>
+        <width>39.17</width>
+        <height>34.23</height>
+        <area>1340.69</area>
+      </size>
+    </detection>
+    <detection id="43">
+      <class id="0">vehicle</class>
+      <confidence>0.867739</confidence>
+      <bounding_box format="xyxy">
+        <x1>188.25</x1>
+        <y1>663.08</y1>
+        <x2>252.58</x2>
+        <y2>694.00</y2>
+      </bounding_box>
+      <center>
+        <x>220.41</x>
+        <y>678.54</y>
+      </center>
+      <size>
+        <width>64.33</width>
+        <height>30.92</height>
+        <area>1988.92</area>
+      </size>
+    </detection>
+    <detection id="44">
+      <class id="0">vehicle</class>
+      <confidence>0.867151</confidence>
+      <bounding_box format="xyxy">
+        <x1>310.52</x1>
+        <y1>166.06</y1>
+        <x2>336.72</x2>
+        <y2>185.82</y2>
+      </bounding_box>
+      <center>
+        <x>323.62</x>
+        <y>175.94</y>
+      </center>
+      <size>
+        <width>26.20</width>
+        <height>19.76</height>
+        <area>517.77</area>
+      </size>
+    </detection>
+    <detection id="45">
+      <class id="0">vehicle</class>
+      <confidence>0.864335</confidence>
+      <bounding_box format="xyxy">
+        <x1>493.95</x1>
+        <y1>194.95</y1>
+        <x2>518.49</x2>
+        <y2>214.49</y2>
+      </bounding_box>
+      <center>
+        <x>506.22</x>
+        <y>204.72</y>
+      </center>
+      <size>
+        <width>24.54</width>
+        <height>19.54</height>
+        <area>479.52</area>
+      </size>
+    </detection>
+    <detection id="46">
+      <class id="0">vehicle</class>
+      <confidence>0.861177</confidence>
+      <bounding_box format="xyxy">
+        <x1>295.27</x1>
+        <y1>546.97</y1>
+        <x2>355.95</x2>
+        <y2>573.06</y2>
+      </bounding_box>
+      <center>
+        <x>325.61</x>
+        <y>560.02</y>
+      </center>
+      <size>
+        <width>60.68</width>
+        <height>26.10</height>
+        <area>1583.51</area>
+      </size>
+    </detection>
+    <detection id="47">
+      <class id="0">vehicle</class>
+      <confidence>0.860422</confidence>
+      <bounding_box format="xyxy">
+        <x1>280.63</x1>
+        <y1>213.83</y1>
+        <x2>307.09</x2>
+        <y2>235.35</y2>
+      </bounding_box>
+      <center>
+        <x>293.86</x>
+        <y>224.59</y>
+      </center>
+      <size>
+        <width>26.46</width>
+        <height>21.51</height>
+        <area>569.23</area>
+      </size>
+    </detection>
+    <detection id="48">
+      <class id="0">vehicle</class>
+      <confidence>0.860390</confidence>
+      <bounding_box format="xyxy">
+        <x1>535.27</x1>
+        <y1>233.02</y1>
+        <x2>563.64</x2>
+        <y2>254.15</y2>
+      </bounding_box>
+      <center>
+        <x>549.45</x>
+        <y>243.58</y>
+      </center>
+      <size>
+        <width>28.37</width>
+        <height>21.14</height>
+        <area>599.68</area>
+      </size>
+    </detection>
+    <detection id="49">
+      <class id="0">vehicle</class>
+      <confidence>0.856941</confidence>
+      <bounding_box format="xyxy">
+        <x1>321.58</x1>
+        <y1>212.66</y1>
+        <x2>348.17</x2>
+        <y2>239.04</y2>
+      </bounding_box>
+      <center>
+        <x>334.87</x>
+        <y>225.85</y>
+      </center>
+      <size>
+        <width>26.58</width>
+        <height>26.38</height>
+        <area>701.37</area>
+      </size>
+    </detection>
+    <detection id="50">
+      <class id="0">vehicle</class>
+      <confidence>0.856799</confidence>
+      <bounding_box format="xyxy">
+        <x1>413.76</x1>
+        <y1>391.61</y1>
+        <x2>444.92</x2>
+        <y2>420.00</y2>
+      </bounding_box>
+      <center>
+        <x>429.34</x>
+        <y>405.80</y>
+      </center>
+      <size>
+        <width>31.17</width>
+        <height>28.39</height>
+        <area>884.78</area>
+      </size>
+    </detection>
+    <detection id="51">
+      <class id="0">vehicle</class>
+      <confidence>0.856707</confidence>
+      <bounding_box format="xyxy">
+        <x1>1790.23</x1>
+        <y1>492.88</y1>
+        <x2>1855.41</x2>
+        <y2>517.94</y2>
+      </bounding_box>
+      <center>
+        <x>1822.82</x>
+        <y>505.41</y>
+      </center>
+      <size>
+        <width>65.18</width>
+        <height>25.06</height>
+        <area>1633.22</area>
+      </size>
+    </detection>
+    <detection id="52">
+      <class id="0">vehicle</class>
+      <confidence>0.852216</confidence>
+      <bounding_box format="xyxy">
+        <x1>555.80</x1>
+        <y1>207.31</y1>
+        <x2>580.32</x2>
+        <y2>228.23</y2>
+      </bounding_box>
+      <center>
+        <x>568.06</x>
+        <y>217.77</y>
+      </center>
+      <size>
+        <width>24.52</width>
+        <height>20.92</height>
+        <area>512.96</area>
+      </size>
+    </detection>
+    <detection id="53">
+      <class id="0">vehicle</class>
+      <confidence>0.849547</confidence>
+      <bounding_box format="xyxy">
+        <x1>131.13</x1>
+        <y1>627.66</y1>
+        <x2>191.75</x2>
+        <y2>651.55</y2>
+      </bounding_box>
+      <center>
+        <x>161.44</x>
+        <y>639.60</y>
+      </center>
+      <size>
+        <width>60.61</width>
+        <height>23.88</height>
+        <area>1447.66</area>
+      </size>
+    </detection>
+    <detection id="54">
+      <class id="0">vehicle</class>
+      <confidence>0.846201</confidence>
+      <bounding_box format="xyxy">
+        <x1>1378.42</x1>
+        <y1>478.90</y1>
+        <x2>1434.02</x2>
+        <y2>505.00</y2>
+      </bounding_box>
+      <center>
+        <x>1406.22</x>
+        <y>491.95</y>
+      </center>
+      <size>
+        <width>55.59</width>
+        <height>26.09</height>
+        <area>1450.62</area>
+      </size>
+    </detection>
+    <detection id="55">
+      <class id="0">vehicle</class>
+      <confidence>0.846129</confidence>
+      <bounding_box format="xyxy">
+        <x1>713.87</x1>
+        <y1>730.59</y1>
+        <x2>765.48</x2>
+        <y2>776.09</y2>
+      </bounding_box>
+      <center>
+        <x>739.67</x>
+        <y>753.34</y>
+      </center>
+      <size>
+        <width>51.60</width>
+        <height>45.50</height>
+        <area>2347.76</area>
+      </size>
+    </detection>
+    <detection id="56">
+      <class id="0">vehicle</class>
+      <confidence>0.844926</confidence>
+      <bounding_box format="xyxy">
+        <x1>675.96</x1>
+        <y1>303.69</y1>
+        <x2>708.99</x2>
+        <y2>333.53</y2>
+      </bounding_box>
+      <center>
+        <x>692.48</x>
+        <y>318.61</y>
+      </center>
+      <size>
+        <width>33.03</width>
+        <height>29.84</height>
+        <area>985.50</area>
+      </size>
+    </detection>
+    <detection id="57">
+      <class id="0">vehicle</class>
+      <confidence>0.843479</confidence>
+      <bounding_box format="xyxy">
+        <x1>131.75</x1>
+        <y1>5.05</y1>
+        <x2>150.87</x2>
+        <y2>20.31</y2>
+      </bounding_box>
+      <center>
+        <x>141.31</x>
+        <y>12.68</y>
+      </center>
+      <size>
+        <width>19.11</width>
+        <height>15.26</height>
+        <area>291.56</area>
+      </size>
+    </detection>
+    <detection id="58">
+      <class id="0">vehicle</class>
+      <confidence>0.842584</confidence>
+      <bounding_box format="xyxy">
+        <x1>1333.62</x1>
+        <y1>907.36</y1>
+        <x2>1388.44</x2>
+        <y2>945.41</y2>
+      </bounding_box>
+      <center>
+        <x>1361.03</x>
+        <y>926.39</y>
+      </center>
+      <size>
+        <width>54.83</width>
+        <height>38.05</height>
+        <area>2086.08</area>
+      </size>
+    </detection>
+    <detection id="59">
+      <class id="0">vehicle</class>
+      <confidence>0.842513</confidence>
+      <bounding_box format="xyxy">
+        <x1>945.30</x1>
+        <y1>465.98</y1>
+        <x2>983.05</x2>
+        <y2>494.19</y2>
+      </bounding_box>
+      <center>
+        <x>964.17</x>
+        <y>480.08</y>
+      </center>
+      <size>
+        <width>37.76</width>
+        <height>28.21</height>
+        <area>1065.15</area>
+      </size>
+    </detection>
+    <detection id="60">
+      <class id="0">vehicle</class>
+      <confidence>0.840253</confidence>
+      <bounding_box format="xyxy">
+        <x1>1590.60</x1>
+        <y1>451.60</y1>
+        <x2>1649.07</x2>
+        <y2>478.55</y2>
+      </bounding_box>
+      <center>
+        <x>1619.83</x>
+        <y>465.07</y>
+      </center>
+      <size>
+        <width>58.47</width>
+        <height>26.95</height>
+        <area>1575.92</area>
+      </size>
+    </detection>
+    <detection id="61">
+      <class id="0">vehicle</class>
+      <confidence>0.838863</confidence>
+      <bounding_box format="xyxy">
+        <x1>773.60</x1>
+        <y1>444.33</y1>
+        <x2>810.41</x2>
+        <y2>469.33</y2>
+      </bounding_box>
+      <center>
+        <x>792.01</x>
+        <y>456.83</y>
+      </center>
+      <size>
+        <width>36.80</width>
+        <height>25.00</height>
+        <area>920.00</area>
+      </size>
+    </detection>
+    <detection id="62">
+      <class id="0">vehicle</class>
+      <confidence>0.836964</confidence>
+      <bounding_box format="xyxy">
+        <x1>163.11</x1>
+        <y1>99.22</y1>
+        <x2>185.04</x2>
+        <y2>119.21</y2>
+      </bounding_box>
+      <center>
+        <x>174.08</x>
+        <y>109.21</y>
+      </center>
+      <size>
+        <width>21.92</width>
+        <height>19.99</height>
+        <area>438.28</area>
+      </size>
+    </detection>
+    <detection id="63">
+      <class id="0">vehicle</class>
+      <confidence>0.833719</confidence>
+      <bounding_box format="xyxy">
+        <x1>1683.64</x1>
+        <y1>543.17</y1>
+        <x2>1752.76</x2>
+        <y2>570.84</y2>
+      </bounding_box>
+      <center>
+        <x>1718.20</x>
+        <y>557.01</y>
+      </center>
+      <size>
+        <width>69.13</width>
+        <height>27.67</height>
+        <area>1912.80</area>
+      </size>
+    </detection>
+    <detection id="64">
+      <class id="0">vehicle</class>
+      <confidence>0.830482</confidence>
+      <bounding_box format="xyxy">
+        <x1>1885.18</x1>
+        <y1>497.54</y1>
+        <x2>1919.73</x2>
+        <y2>523.85</y2>
+      </bounding_box>
+      <center>
+        <x>1902.45</x>
+        <y>510.69</y>
+      </center>
+      <size>
+        <width>34.55</width>
+        <height>26.31</height>
+        <area>908.95</area>
+      </size>
+    </detection>
+    <detection id="65">
+      <class id="0">vehicle</class>
+      <confidence>0.827480</confidence>
+      <bounding_box format="xyxy">
+        <x1>574.81</x1>
+        <y1>263.23</y1>
+        <x2>606.33</x2>
+        <y2>284.39</y2>
+      </bounding_box>
+      <center>
+        <x>590.57</x>
+        <y>273.81</y>
+      </center>
+      <size>
+        <width>31.52</width>
+        <height>21.16</height>
+        <area>666.97</area>
+      </size>
+    </detection>
+    <detection id="66">
+      <class id="0">vehicle</class>
+      <confidence>0.827416</confidence>
+      <bounding_box format="xyxy">
+        <x1>426.34</x1>
+        <y1>120.18</y1>
+        <x2>451.21</x2>
+        <y2>138.02</y2>
+      </bounding_box>
+      <center>
+        <x>438.77</x>
+        <y>129.10</y>
+      </center>
+      <size>
+        <width>24.87</width>
+        <height>17.84</height>
+        <area>443.63</area>
+      </size>
+    </detection>
+    <detection id="67">
+      <class id="0">vehicle</class>
+      <confidence>0.827377</confidence>
+      <bounding_box format="xyxy">
+        <x1>19.09</x1>
+        <y1>98.61</y1>
+        <x2>37.30</x2>
+        <y2>116.34</y2>
+      </bounding_box>
+      <center>
+        <x>28.19</x>
+        <y>107.48</y>
+      </center>
+      <size>
+        <width>18.20</width>
+        <height>17.73</height>
+        <area>322.79</area>
+      </size>
+    </detection>
+    <detection id="68">
+      <class id="0">vehicle</class>
+      <confidence>0.825904</confidence>
+      <bounding_box format="xyxy">
+        <x1>1801.93</x1>
+        <y1>514.24</y1>
+        <x2>1867.95</x2>
+        <y2>539.63</y2>
+      </bounding_box>
+      <center>
+        <x>1834.94</x>
+        <y>526.93</y>
+      </center>
+      <size>
+        <width>66.02</width>
+        <height>25.38</height>
+        <area>1675.95</area>
+      </size>
+    </detection>
+    <detection id="69">
+      <class id="0">vehicle</class>
+      <confidence>0.824699</confidence>
+      <bounding_box format="xyxy">
+        <x1>1097.50</x1>
+        <y1>473.00</y1>
+        <x2>1163.93</x2>
+        <y2>505.83</y2>
+      </bounding_box>
+      <center>
+        <x>1130.71</x>
+        <y>489.42</y>
+      </center>
+      <size>
+        <width>66.44</width>
+        <height>32.82</height>
+        <area>2180.74</area>
+      </size>
+    </detection>
+    <detection id="70">
+      <class id="0">vehicle</class>
+      <confidence>0.823895</confidence>
+      <bounding_box format="xyxy">
+        <x1>1622.21</x1>
+        <y1>759.86</y1>
+        <x2>1693.02</x2>
+        <y2>786.09</y2>
+      </bounding_box>
+      <center>
+        <x>1657.61</x>
+        <y>772.97</y>
+      </center>
+      <size>
+        <width>70.81</width>
+        <height>26.23</height>
+        <area>1857.48</area>
+      </size>
+    </detection>
+    <detection id="71">
+      <class id="0">vehicle</class>
+      <confidence>0.823359</confidence>
+      <bounding_box format="xyxy">
+        <x1>417.72</x1>
+        <y1>836.07</y1>
+        <x2>501.08</x2>
+        <y2>874.64</y2>
+      </bounding_box>
+      <center>
+        <x>459.40</x>
+        <y>855.36</y>
+      </center>
+      <size>
+        <width>83.36</width>
+        <height>38.57</height>
+        <area>3215.32</area>
+      </size>
+    </detection>
+    <detection id="72">
+      <class id="0">vehicle</class>
+      <confidence>0.823339</confidence>
+      <bounding_box format="xyxy">
+        <x1>233.15</x1>
+        <y1>96.06</y1>
+        <x2>254.59</x2>
+        <y2>115.59</y2>
+      </bounding_box>
+      <center>
+        <x>243.87</x>
+        <y>105.83</y>
+      </center>
+      <size>
+        <width>21.44</width>
+        <height>19.54</height>
+        <area>418.99</area>
+      </size>
+    </detection>
+    <detection id="73">
+      <class id="0">vehicle</class>
+      <confidence>0.815920</confidence>
+      <bounding_box format="xyxy">
+        <x1>604.66</x1>
+        <y1>233.98</y1>
+        <x2>632.09</x2>
+        <y2>255.68</y2>
+      </bounding_box>
+      <center>
+        <x>618.38</x>
+        <y>244.83</y>
+      </center>
+      <size>
+        <width>27.43</width>
+        <height>21.70</height>
+        <area>595.22</area>
+      </size>
+    </detection>
+    <detection id="74">
+      <class id="0">vehicle</class>
+      <confidence>0.815913</confidence>
+      <bounding_box format="xyxy">
+        <x1>1530.98</x1>
+        <y1>478.27</y1>
+        <x2>1594.57</x2>
+        <y2>502.90</y2>
+      </bounding_box>
+      <center>
+        <x>1562.78</x>
+        <y>490.58</y>
+      </center>
+      <size>
+        <width>63.59</width>
+        <height>24.63</height>
+        <area>1566.29</area>
+      </size>
+    </detection>
+    <detection id="75">
+      <class id="0">vehicle</class>
+      <confidence>0.815601</confidence>
+      <bounding_box format="xyxy">
+        <x1>1158.98</x1>
+        <y1>821.96</y1>
+        <x2>1210.81</x2>
+        <y2>858.36</y2>
+      </bounding_box>
+      <center>
+        <x>1184.90</x>
+        <y>840.16</y>
+      </center>
+      <size>
+        <width>51.83</width>
+        <height>36.40</height>
+        <area>1886.96</area>
+      </size>
+    </detection>
+    <detection id="76">
+      <class id="0">vehicle</class>
+      <confidence>0.809048</confidence>
+      <bounding_box format="xyxy">
+        <x1>1653.11</x1>
+        <y1>460.37</y1>
+        <x2>1719.24</x2>
+        <y2>485.01</y2>
+      </bounding_box>
+      <center>
+        <x>1686.17</x>
+        <y>472.69</y>
+      </center>
+      <size>
+        <width>66.13</width>
+        <height>24.63</height>
+        <area>1629.00</area>
+      </size>
+    </detection>
+    <detection id="77">
+      <class id="0">vehicle</class>
+      <confidence>0.807613</confidence>
+      <bounding_box format="xyxy">
+        <x1>470.36</x1>
+        <y1>169.59</y1>
+        <x2>498.24</x2>
+        <y2>191.66</y2>
+      </bounding_box>
+      <center>
+        <x>484.30</x>
+        <y>180.62</y>
+      </center>
+      <size>
+        <width>27.88</width>
+        <height>22.06</height>
+        <area>615.07</area>
+      </size>
+    </detection>
+    <detection id="78">
+      <class id="0">vehicle</class>
+      <confidence>0.802714</confidence>
+      <bounding_box format="xyxy">
+        <x1>1883.13</x1>
+        <y1>485.39</y1>
+        <x2>1919.64</x2>
+        <y2>508.35</y2>
+      </bounding_box>
+      <center>
+        <x>1901.38</x>
+        <y>496.87</y>
+      </center>
+      <size>
+        <width>36.51</width>
+        <height>22.95</height>
+        <area>838.04</area>
+      </size>
+    </detection>
+    <detection id="79">
+      <class id="0">vehicle</class>
+      <confidence>0.799085</confidence>
+      <bounding_box format="xyxy">
+        <x1>1370.77</x1>
+        <y1>463.18</y1>
+        <x2>1428.69</x2>
+        <y2>489.65</y2>
+      </bounding_box>
+      <center>
+        <x>1399.73</x>
+        <y>476.41</y>
+      </center>
+      <size>
+        <width>57.92</width>
+        <height>26.47</height>
+        <area>1533.36</area>
+      </size>
+    </detection>
+    <detection id="80">
+      <class id="0">vehicle</class>
+      <confidence>0.795817</confidence>
+      <bounding_box format="xyxy">
+        <x1>1444.60</x1>
+        <y1>453.03</y1>
+        <x2>1498.46</x2>
+        <y2>477.96</y2>
+      </bounding_box>
+      <center>
+        <x>1471.53</x>
+        <y>465.50</y>
+      </center>
+      <size>
+        <width>53.86</width>
+        <height>24.93</height>
+        <area>1342.68</area>
+      </size>
+    </detection>
+    <detection id="81">
+      <class id="0">vehicle</class>
+      <confidence>0.793870</confidence>
+      <bounding_box format="xyxy">
+        <x1>99.30</x1>
+        <y1>77.79</y1>
+        <x2>118.71</x2>
+        <y2>96.09</y2>
+      </bounding_box>
+      <center>
+        <x>109.00</x>
+        <y>86.94</y>
+      </center>
+      <size>
+        <width>19.41</width>
+        <height>18.30</height>
+        <area>355.21</area>
+      </size>
+    </detection>
+    <detection id="82">
+      <class id="0">vehicle</class>
+      <confidence>0.792719</confidence>
+      <bounding_box format="xyxy">
+        <x1>245.77</x1>
+        <y1>739.45</y1>
+        <x2>275.85</x2>
+        <y2>769.01</y2>
+      </bounding_box>
+      <center>
+        <x>260.81</x>
+        <y>754.23</y>
+      </center>
+      <size>
+        <width>30.07</width>
+        <height>29.56</height>
+        <area>888.94</area>
+      </size>
+    </detection>
+    <detection id="83">
+      <class id="0">vehicle</class>
+      <confidence>0.788199</confidence>
+      <bounding_box format="xyxy">
+        <x1>1686.80</x1>
+        <y1>510.82</y1>
+        <x2>1757.59</x2>
+        <y2>537.79</y2>
+      </bounding_box>
+      <center>
+        <x>1722.20</x>
+        <y>524.30</y>
+      </center>
+      <size>
+        <width>70.80</width>
+        <height>26.97</height>
+        <area>1909.22</area>
+      </size>
+    </detection>
+    <detection id="84">
+      <class id="0">vehicle</class>
+      <confidence>0.787814</confidence>
+      <bounding_box format="xyxy">
+        <x1>169.99</x1>
+        <y1>644.46</y1>
+        <x2>242.97</x2>
+        <y2>672.02</y2>
+      </bounding_box>
+      <center>
+        <x>206.48</x>
+        <y>658.24</y>
+      </center>
+      <size>
+        <width>72.98</width>
+        <height>27.56</height>
+        <area>2011.09</area>
+      </size>
+    </detection>
+    <detection id="85">
+      <class id="0">vehicle</class>
+      <confidence>0.785112</confidence>
+      <bounding_box format="xyxy">
+        <x1>225.67</x1>
+        <y1>166.61</y1>
+        <x2>251.74</x2>
+        <y2>186.00</y2>
+      </bounding_box>
+      <center>
+        <x>238.70</x>
+        <y>176.30</y>
+      </center>
+      <size>
+        <width>26.07</width>
+        <height>19.39</height>
+        <area>505.55</area>
+      </size>
+    </detection>
+    <detection id="86">
+      <class id="1">person</class>
+      <confidence>0.782574</confidence>
+      <bounding_box format="xyxy">
+        <x1>1522.06</x1>
+        <y1>506.05</y1>
+        <x2>1672.41</x2>
+        <y2>559.33</y2>
+      </bounding_box>
+      <center>
+        <x>1597.24</x>
+        <y>532.69</y>
+      </center>
+      <size>
+        <width>150.35</width>
+        <height>53.28</height>
+        <area>8010.75</area>
+      </size>
+    </detection>
+    <detection id="87">
+      <class id="0">vehicle</class>
+      <confidence>0.782570</confidence>
+      <bounding_box format="xyxy">
+        <x1>1185.24</x1>
+        <y1>546.67</y1>
+        <x2>1260.15</x2>
+        <y2>576.42</y2>
+      </bounding_box>
+      <center>
+        <x>1222.69</x>
+        <y>561.55</y>
+      </center>
+      <size>
+        <width>74.91</width>
+        <height>29.75</height>
+        <area>2228.37</area>
+      </size>
+    </detection>
+    <detection id="88">
+      <class id="0">vehicle</class>
+      <confidence>0.781953</confidence>
+      <bounding_box format="xyxy">
+        <x1>115.79</x1>
+        <y1>0.00</y1>
+        <x2>132.40</x2>
+        <y2>7.17</y2>
+      </bounding_box>
+      <center>
+        <x>124.09</x>
+        <y>3.58</y>
+      </center>
+      <size>
+        <width>16.61</width>
+        <height>7.17</height>
+        <area>119.05</area>
+      </size>
+    </detection>
+    <detection id="89">
+      <class id="0">vehicle</class>
+      <confidence>0.781836</confidence>
+      <bounding_box format="xyxy">
+        <x1>1417.41</x1>
+        <y1>557.28</y1>
+        <x2>1484.34</x2>
+        <y2>585.56</y2>
+      </bounding_box>
+      <center>
+        <x>1450.88</x>
+        <y>571.42</y>
+      </center>
+      <size>
+        <width>66.93</width>
+        <height>28.28</height>
+        <area>1892.97</area>
+      </size>
+    </detection>
+    <detection id="90">
+      <class id="1">person</class>
+      <confidence>0.781781</confidence>
+      <bounding_box format="xyxy">
+        <x1>1706.53</x1>
+        <y1>728.27</y1>
+        <x2>1863.34</x2>
+        <y2>793.06</y2>
+      </bounding_box>
+      <center>
+        <x>1784.94</x>
+        <y>760.66</y>
+      </center>
+      <size>
+        <width>156.80</width>
+        <height>64.79</height>
+        <area>10159.66</area>
+      </size>
+    </detection>
+    <detection id="91">
+      <class id="0">vehicle</class>
+      <confidence>0.779548</confidence>
+      <bounding_box format="xyxy">
+        <x1>1868.01</x1>
+        <y1>522.65</y1>
+        <x2>1919.08</x2>
+        <y2>548.26</y2>
+      </bounding_box>
+      <center>
+        <x>1893.54</x>
+        <y>535.45</y>
+      </center>
+      <size>
+        <width>51.07</width>
+        <height>25.60</height>
+        <area>1307.74</area>
+      </size>
+    </detection>
+    <detection id="92">
+      <class id="0">vehicle</class>
+      <confidence>0.771537</confidence>
+      <bounding_box format="xyxy">
+        <x1>813.36</x1>
+        <y1>345.84</y1>
+        <x2>847.73</x2>
+        <y2>368.74</y2>
+      </bounding_box>
+      <center>
+        <x>830.54</x>
+        <y>357.29</y>
+      </center>
+      <size>
+        <width>34.37</width>
+        <height>22.90</height>
+        <area>787.05</area>
+      </size>
+    </detection>
+    <detection id="93">
+      <class id="0">vehicle</class>
+      <confidence>0.771285</confidence>
+      <bounding_box format="xyxy">
+        <x1>1385.16</x1>
+        <y1>546.66</y1>
+        <x2>1456.28</x2>
+        <y2>573.78</y2>
+      </bounding_box>
+      <center>
+        <x>1420.72</x>
+        <y>560.22</y>
+      </center>
+      <size>
+        <width>71.12</width>
+        <height>27.12</height>
+        <area>1929.03</area>
+      </size>
+    </detection>
+    <detection id="94">
+      <class id="0">vehicle</class>
+      <confidence>0.768016</confidence>
+      <bounding_box format="xyxy">
+        <x1>313.50</x1>
+        <y1>0.00</y1>
+        <x2>328.87</x2>
+        <y2>6.46</y2>
+      </bounding_box>
+      <center>
+        <x>321.19</x>
+        <y>3.23</y>
+      </center>
+      <size>
+        <width>15.37</width>
+        <height>6.46</height>
+        <area>99.30</area>
+      </size>
+    </detection>
+    <detection id="95">
+      <class id="0">vehicle</class>
+      <confidence>0.765255</confidence>
+      <bounding_box format="xyxy">
+        <x1>1363.71</x1>
+        <y1>574.25</y1>
+        <x2>1434.67</x2>
+        <y2>601.62</y2>
+      </bounding_box>
+      <center>
+        <x>1399.19</x>
+        <y>587.94</y>
+      </center>
+      <size>
+        <width>70.96</width>
+        <height>27.37</height>
+        <area>1942.03</area>
+      </size>
+    </detection>
+    <detection id="96">
+      <class id="0">vehicle</class>
+      <confidence>0.757185</confidence>
+      <bounding_box format="xyxy">
+        <x1>107.62</x1>
+        <y1>740.90</y1>
+        <x2>138.16</x2>
+        <y2>771.55</y2>
+      </bounding_box>
+      <center>
+        <x>122.89</x>
+        <y>756.22</y>
+      </center>
+      <size>
+        <width>30.54</width>
+        <height>30.65</height>
+        <area>936.03</area>
+      </size>
+    </detection>
+    <detection id="97">
+      <class id="0">vehicle</class>
+      <confidence>0.755802</confidence>
+      <bounding_box format="xyxy">
+        <x1>258.75</x1>
+        <y1>758.68</y1>
+        <x2>292.06</x2>
+        <y2>792.18</y2>
+      </bounding_box>
+      <center>
+        <x>275.41</x>
+        <y>775.43</y>
+      </center>
+      <size>
+        <width>33.31</width>
+        <height>33.50</height>
+        <area>1115.86</area>
+      </size>
+    </detection>
+    <detection id="98">
+      <class id="0">vehicle</class>
+      <confidence>0.755383</confidence>
+      <bounding_box format="xyxy">
+        <x1>1085.04</x1>
+        <y1>503.30</y1>
+        <x2>1133.83</x2>
+        <y2>527.70</y2>
+      </bounding_box>
+      <center>
+        <x>1109.44</x>
+        <y>515.50</y>
+      </center>
+      <size>
+        <width>48.78</width>
+        <height>24.40</height>
+        <area>1190.31</area>
+      </size>
+    </detection>
+    <detection id="99">
+      <class id="0">vehicle</class>
+      <confidence>0.750936</confidence>
+      <bounding_box format="xyxy">
+        <x1>1306.26</x1>
+        <y1>531.82</y1>
+        <x2>1380.09</x2>
+        <y2>564.61</y2>
+      </bounding_box>
+      <center>
+        <x>1343.18</x>
+        <y>548.22</y>
+      </center>
+      <size>
+        <width>73.84</width>
+        <height>32.79</height>
+        <area>2420.92</area>
+      </size>
+    </detection>
+    <detection id="100">
+      <class id="0">vehicle</class>
+      <confidence>0.747494</confidence>
+      <bounding_box format="xyxy">
+        <x1>1276.72</x1>
+        <y1>559.17</y1>
+        <x2>1356.37</x2>
+        <y2>592.89</y2>
+      </bounding_box>
+      <center>
+        <x>1316.55</x>
+        <y>576.03</y>
+      </center>
+      <size>
+        <width>79.65</width>
+        <height>33.72</height>
+        <area>2685.75</area>
+      </size>
+    </detection>
+    <detection id="101">
+      <class id="0">vehicle</class>
+      <confidence>0.746188</confidence>
+      <bounding_box format="xyxy">
+        <x1>1892.30</x1>
+        <y1>533.36</y1>
+        <x2>1919.65</x2>
+        <y2>557.19</y2>
+      </bounding_box>
+      <center>
+        <x>1905.98</x>
+        <y>545.27</y>
+      </center>
+      <size>
+        <width>27.34</width>
+        <height>23.83</height>
+        <area>651.69</area>
+      </size>
+    </detection>
+    <detection id="102">
+      <class id="0">vehicle</class>
+      <confidence>0.745946</confidence>
+      <bounding_box format="xyxy">
+        <x1>333.12</x1>
+        <y1>576.85</y1>
+        <x2>398.55</x2>
+        <y2>605.27</y2>
+      </bounding_box>
+      <center>
+        <x>365.83</x>
+        <y>591.06</y>
+      </center>
+      <size>
+        <width>65.42</width>
+        <height>28.42</height>
+        <area>1859.25</area>
+      </size>
+    </detection>
+    <detection id="103">
+      <class id="0">vehicle</class>
+      <confidence>0.745241</confidence>
+      <bounding_box format="xyxy">
+        <x1>136.72</x1>
+        <y1>73.40</y1>
+        <x2>159.65</x2>
+        <y2>92.71</y2>
+      </bounding_box>
+      <center>
+        <x>148.18</x>
+        <y>83.05</y>
+      </center>
+      <size>
+        <width>22.93</width>
+        <height>19.31</height>
+        <area>442.75</area>
+      </size>
+    </detection>
+    <detection id="104">
+      <class id="0">vehicle</class>
+      <confidence>0.744808</confidence>
+      <bounding_box format="xyxy">
+        <x1>1878.29</x1>
+        <y1>721.82</y1>
+        <x2>1919.87</x2>
+        <y2>749.95</y2>
+      </bounding_box>
+      <center>
+        <x>1899.08</x>
+        <y>735.89</y>
+      </center>
+      <size>
+        <width>41.58</width>
+        <height>28.14</height>
+        <area>1169.84</area>
+      </size>
+    </detection>
+    <detection id="105">
+      <class id="0">vehicle</class>
+      <confidence>0.743326</confidence>
+      <bounding_box format="xyxy">
+        <x1>206.94</x1>
+        <y1>735.43</y1>
+        <x2>236.64</x2>
+        <y2>764.58</y2>
+      </bounding_box>
+      <center>
+        <x>221.79</x>
+        <y>750.01</y>
+      </center>
+      <size>
+        <width>29.69</width>
+        <height>29.15</height>
+        <area>865.57</area>
+      </size>
+    </detection>
+    <detection id="106">
+      <class id="0">vehicle</class>
+      <confidence>0.743129</confidence>
+      <bounding_box format="xyxy">
+        <x1>238.49</x1>
+        <y1>136.69</y1>
+        <x2>262.74</x2>
+        <y2>157.34</y2>
+      </bounding_box>
+      <center>
+        <x>250.61</x>
+        <y>147.01</y>
+      </center>
+      <size>
+        <width>24.26</width>
+        <height>20.65</height>
+        <area>500.99</area>
+      </size>
+    </detection>
+    <detection id="107">
+      <class id="0">vehicle</class>
+      <confidence>0.735633</confidence>
+      <bounding_box format="xyxy">
+        <x1>1427.52</x1>
+        <y1>518.36</y1>
+        <x2>1496.32</x2>
+        <y2>542.56</y2>
+      </bounding_box>
+      <center>
+        <x>1461.92</x>
+        <y>530.46</y>
+      </center>
+      <size>
+        <width>68.80</width>
+        <height>24.20</height>
+        <area>1664.94</area>
+      </size>
+    </detection>
+    <detection id="108">
+      <class id="0">vehicle</class>
+      <confidence>0.730512</confidence>
+      <bounding_box format="xyxy">
+        <x1>1632.39</x1>
+        <y1>539.70</y1>
+        <x2>1695.23</x2>
+        <y2>565.08</y2>
+      </bounding_box>
+      <center>
+        <x>1663.81</x>
+        <y>552.39</y>
+      </center>
+      <size>
+        <width>62.84</width>
+        <height>25.38</height>
+        <area>1594.95</area>
+      </size>
+    </detection>
+    <detection id="109">
+      <class id="0">vehicle</class>
+      <confidence>0.720140</confidence>
+      <bounding_box format="xyxy">
+        <x1>332.40</x1>
+        <y1>190.23</y1>
+        <x2>358.81</x2>
+        <y2>211.92</y2>
+      </bounding_box>
+      <center>
+        <x>345.60</x>
+        <y>201.08</y>
+      </center>
+      <size>
+        <width>26.41</width>
+        <height>21.69</height>
+        <area>572.96</area>
+      </size>
+    </detection>
+    <detection id="110">
+      <class id="0">vehicle</class>
+      <confidence>0.714947</confidence>
+      <bounding_box format="xyxy">
+        <x1>1692.23</x1>
+        <y1>501.41</y1>
+        <x2>1760.76</x2>
+        <y2>522.95</y2>
+      </bounding_box>
+      <center>
+        <x>1726.49</x>
+        <y>512.18</y>
+      </center>
+      <size>
+        <width>68.53</width>
+        <height>21.54</height>
+        <area>1475.85</area>
+      </size>
+    </detection>
+    <detection id="111">
+      <class id="0">vehicle</class>
+      <confidence>0.698346</confidence>
+      <bounding_box format="xyxy">
+        <x1>756.15</x1>
+        <y1>238.59</y1>
+        <x2>790.02</x2>
+        <y2>262.41</y2>
+      </bounding_box>
+      <center>
+        <x>773.08</x>
+        <y>250.50</y>
+      </center>
+      <size>
+        <width>33.87</width>
+        <height>23.83</height>
+        <area>806.99</area>
+      </size>
+    </detection>
+    <detection id="112">
+      <class id="0">vehicle</class>
+      <confidence>0.694990</confidence>
+      <bounding_box format="xyxy">
+        <x1>1802.51</x1>
+        <y1>506.11</y1>
+        <x2>1859.05</x2>
+        <y2>525.16</y2>
+      </bounding_box>
+      <center>
+        <x>1830.78</x>
+        <y>515.63</y>
+      </center>
+      <size>
+        <width>56.55</width>
+        <height>19.05</height>
+        <area>1077.21</area>
+      </size>
+    </detection>
+    <detection id="113">
+      <class id="0">vehicle</class>
+      <confidence>0.686809</confidence>
+      <bounding_box format="xyxy">
+        <x1>96.52</x1>
+        <y1>664.87</y1>
+        <x2>167.46</x2>
+        <y2>693.06</y2>
+      </bounding_box>
+      <center>
+        <x>131.99</x>
+        <y>678.97</y>
+      </center>
+      <size>
+        <width>70.93</width>
+        <height>28.19</height>
+        <area>1999.60</area>
+      </size>
+    </detection>
+    <detection id="114">
+      <class id="0">vehicle</class>
+      <confidence>0.670889</confidence>
+      <bounding_box format="xyxy">
+        <x1>201.12</x1>
+        <y1>941.69</y1>
+        <x2>277.35</x2>
+        <y2>972.05</y2>
+      </bounding_box>
+      <center>
+        <x>239.23</x>
+        <y>956.87</y>
+      </center>
+      <size>
+        <width>76.23</width>
+        <height>30.36</height>
+        <area>2314.54</area>
+      </size>
+    </detection>
+    <detection id="115">
+      <class id="0">vehicle</class>
+      <confidence>0.668413</confidence>
+      <bounding_box format="xyxy">
+        <x1>321.54</x1>
+        <y1>620.34</y1>
+        <x2>378.27</x2>
+        <y2>643.30</y2>
+      </bounding_box>
+      <center>
+        <x>349.91</x>
+        <y>631.82</y>
+      </center>
+      <size>
+        <width>56.73</width>
+        <height>22.97</height>
+        <area>1302.86</area>
+      </size>
+    </detection>
+    <detection id="116">
+      <class id="0">vehicle</class>
+      <confidence>0.661808</confidence>
+      <bounding_box format="xyxy">
+        <x1>162.97</x1>
+        <y1>740.46</y1>
+        <x2>192.89</x2>
+        <y2>768.77</y2>
+      </bounding_box>
+      <center>
+        <x>177.93</x>
+        <y>754.61</y>
+      </center>
+      <size>
+        <width>29.92</width>
+        <height>28.31</height>
+        <area>846.91</area>
+      </size>
+    </detection>
+    <detection id="117">
+      <class id="0">vehicle</class>
+      <confidence>0.661711</confidence>
+      <bounding_box format="xyxy">
+        <x1>1414.58</x1>
+        <y1>534.44</y1>
+        <x2>1482.03</x2>
+        <y2>559.34</y2>
+      </bounding_box>
+      <center>
+        <x>1448.30</x>
+        <y>546.89</y>
+      </center>
+      <size>
+        <width>67.46</width>
+        <height>24.90</height>
+        <area>1679.68</area>
+      </size>
+    </detection>
+    <detection id="118">
+      <class id="0">vehicle</class>
+      <confidence>0.660260</confidence>
+      <bounding_box format="xyxy">
+        <x1>1534.25</x1>
+        <y1>546.13</y1>
+        <x2>1595.34</x2>
+        <y2>575.06</y2>
+      </bounding_box>
+      <center>
+        <x>1564.80</x>
+        <y>560.60</y>
+      </center>
+      <size>
+        <width>61.09</width>
+        <height>28.94</height>
+        <area>1767.84</area>
+      </size>
+    </detection>
+    <detection id="119">
+      <class id="0">vehicle</class>
+      <confidence>0.659134</confidence>
+      <bounding_box format="xyxy">
+        <x1>1462.58</x1>
+        <y1>768.25</y1>
+        <x2>1527.62</x2>
+        <y2>795.64</y2>
+      </bounding_box>
+      <center>
+        <x>1495.10</x>
+        <y>781.94</y>
+      </center>
+      <size>
+        <width>65.04</width>
+        <height>27.39</height>
+        <area>1781.59</area>
+      </size>
+    </detection>
+    <detection id="120">
+      <class id="0">vehicle</class>
+      <confidence>0.641336</confidence>
+      <bounding_box format="xyxy">
+        <x1>1795.48</x1>
+        <y1>465.02</y1>
+        <x2>1846.73</x2>
+        <y2>485.99</y2>
+      </bounding_box>
+      <center>
+        <x>1821.10</x>
+        <y>475.50</y>
+      </center>
+      <size>
+        <width>51.25</width>
+        <height>20.98</height>
+        <area>1075.01</area>
+      </size>
+    </detection>
+    <detection id="121">
+      <class id="0">vehicle</class>
+      <confidence>0.640698</confidence>
+      <bounding_box format="xyxy">
+        <x1>1634.94</x1>
+        <y1>743.21</y1>
+        <x2>1706.03</x2>
+        <y2>766.81</y2>
+      </bounding_box>
+      <center>
+        <x>1670.49</x>
+        <y>755.01</y>
+      </center>
+      <size>
+        <width>71.09</width>
+        <height>23.61</height>
+        <area>1678.23</area>
+      </size>
+    </detection>
+    <detection id="122">
+      <class id="0">vehicle</class>
+      <confidence>0.629010</confidence>
+      <bounding_box format="xyxy">
+        <x1>249.20</x1>
+        <y1>518.32</y1>
+        <x2>278.44</x2>
+        <y2>541.57</y2>
+      </bounding_box>
+      <center>
+        <x>263.82</x>
+        <y>529.95</y>
+      </center>
+      <size>
+        <width>29.25</width>
+        <height>23.24</height>
+        <area>679.80</area>
+      </size>
+    </detection>
+    <detection id="123">
+      <class id="0">vehicle</class>
+      <confidence>0.627198</confidence>
+      <bounding_box format="xyxy">
+        <x1>253.45</x1>
+        <y1>714.52</y1>
+        <x2>280.71</x2>
+        <y2>743.12</y2>
+      </bounding_box>
+      <center>
+        <x>267.08</x>
+        <y>728.82</y>
+      </center>
+      <size>
+        <width>27.26</width>
+        <height>28.60</height>
+        <area>779.73</area>
+      </size>
+    </detection>
+    <detection id="124">
+      <class id="0">vehicle</class>
+      <confidence>0.622833</confidence>
+      <bounding_box format="xyxy">
+        <x1>1583.56</x1>
+        <y1>440.27</y1>
+        <x2>1638.84</x2>
+        <y2>465.51</y2>
+      </bounding_box>
+      <center>
+        <x>1611.20</x>
+        <y>452.89</y>
+      </center>
+      <size>
+        <width>55.29</width>
+        <height>25.24</height>
+        <area>1395.67</area>
+      </size>
+    </detection>
+    <detection id="125">
+      <class id="0">vehicle</class>
+      <confidence>0.618170</confidence>
+      <bounding_box format="xyxy">
+        <x1>159.19</x1>
+        <y1>503.61</y1>
+        <x2>184.45</x2>
+        <y2>526.26</y2>
+      </bounding_box>
+      <center>
+        <x>171.82</x>
+        <y>514.94</y>
+      </center>
+      <size>
+        <width>25.25</width>
+        <height>22.65</height>
+        <area>572.00</area>
+      </size>
+    </detection>
+    <detection id="126">
+      <class id="0">vehicle</class>
+      <confidence>0.615300</confidence>
+      <bounding_box format="xyxy">
+        <x1>741.34</x1>
+        <y1>291.21</y1>
+        <x2>768.31</x2>
+        <y2>312.46</y2>
+      </bounding_box>
+      <center>
+        <x>754.83</x>
+        <y>301.84</y>
+      </center>
+      <size>
+        <width>26.97</width>
+        <height>21.25</height>
+        <area>573.17</area>
+      </size>
+    </detection>
+    <detection id="127">
+      <class id="0">vehicle</class>
+      <confidence>0.614670</confidence>
+      <bounding_box format="xyxy">
+        <x1>171.16</x1>
+        <y1>528.75</y1>
+        <x2>198.29</x2>
+        <y2>552.96</y2>
+      </bounding_box>
+      <center>
+        <x>184.73</x>
+        <y>540.85</y>
+      </center>
+      <size>
+        <width>27.13</width>
+        <height>24.21</height>
+        <area>656.98</area>
+      </size>
+    </detection>
+    <detection id="128">
+      <class id="0">vehicle</class>
+      <confidence>0.614666</confidence>
+      <bounding_box format="xyxy">
+        <x1>60.88</x1>
+        <y1>577.27</y1>
+        <x2>121.59</x2>
+        <y2>610.32</y2>
+      </bounding_box>
+      <center>
+        <x>91.24</x>
+        <y>593.79</y>
+      </center>
+      <size>
+        <width>60.71</width>
+        <height>33.06</height>
+        <area>2006.79</area>
+      </size>
+    </detection>
+    <detection id="129">
+      <class id="0">vehicle</class>
+      <confidence>0.613066</confidence>
+      <bounding_box format="xyxy">
+        <x1>198.42</x1>
+        <y1>503.84</y1>
+        <x2>226.22</x2>
+        <y2>528.45</y2>
+      </bounding_box>
+      <center>
+        <x>212.32</x>
+        <y>516.15</y>
+      </center>
+      <size>
+        <width>27.80</width>
+        <height>24.61</height>
+        <area>684.23</area>
+      </size>
+    </detection>
+    <detection id="130">
+      <class id="0">vehicle</class>
+      <confidence>0.599793</confidence>
+      <bounding_box format="xyxy">
+        <x1>89.18</x1>
+        <y1>31.15</y1>
+        <x2>106.17</x2>
+        <y2>46.85</y2>
+      </bounding_box>
+      <center>
+        <x>97.67</x>
+        <y>39.00</y>
+      </center>
+      <size>
+        <width>16.99</width>
+        <height>15.70</height>
+        <area>266.76</area>
+      </size>
+    </detection>
+    <detection id="131">
+      <class id="0">vehicle</class>
+      <confidence>0.599081</confidence>
+      <bounding_box format="xyxy">
+        <x1>1469.26</x1>
+        <y1>754.70</y1>
+        <x2>1531.75</x2>
+        <y2>779.30</y2>
+      </bounding_box>
+      <center>
+        <x>1500.51</x>
+        <y>767.00</y>
+      </center>
+      <size>
+        <width>62.49</width>
+        <height>24.61</height>
+        <area>1537.60</area>
+      </size>
+    </detection>
+    <detection id="132">
+      <class id="0">vehicle</class>
+      <confidence>0.585316</confidence>
+      <bounding_box format="xyxy">
+        <x1>195.09</x1>
+        <y1>484.56</y1>
+        <x2>222.99</x2>
+        <y2>506.10</y2>
+      </bounding_box>
+      <center>
+        <x>209.04</x>
+        <y>495.33</y>
+      </center>
+      <size>
+        <width>27.90</width>
+        <height>21.54</height>
+        <area>600.98</area>
+      </size>
+    </detection>
+    <detection id="133">
+      <class id="0">vehicle</class>
+      <confidence>0.583938</confidence>
+      <bounding_box format="xyxy">
+        <x1>0.00</x1>
+        <y1>686.16</y1>
+        <x2>40.61</x2>
+        <y2>713.98</y2>
+      </bounding_box>
+      <center>
+        <x>20.31</x>
+        <y>700.07</y>
+      </center>
+      <size>
+        <width>40.61</width>
+        <height>27.82</height>
+        <area>1129.82</area>
+      </size>
+    </detection>
+    <detection id="134">
+      <class id="0">vehicle</class>
+      <confidence>0.583066</confidence>
+      <bounding_box format="xyxy">
+        <x1>1159.78</x1>
+        <y1>511.39</y1>
+        <x2>1224.66</x2>
+        <y2>536.92</y2>
+      </bounding_box>
+      <center>
+        <x>1192.22</x>
+        <y>524.15</y>
+      </center>
+      <size>
+        <width>64.88</width>
+        <height>25.53</height>
+        <area>1656.59</area>
+      </size>
+    </detection>
+    <detection id="135">
+      <class id="0">vehicle</class>
+      <confidence>0.577984</confidence>
+      <bounding_box format="xyxy">
+        <x1>786.66</x1>
+        <y1>328.25</y1>
+        <x2>818.55</x2>
+        <y2>348.98</y2>
+      </bounding_box>
+      <center>
+        <x>802.60</x>
+        <y>338.61</y>
+      </center>
+      <size>
+        <width>31.89</width>
+        <height>20.73</height>
+        <area>661.08</area>
+      </size>
+    </detection>
+    <detection id="136">
+      <class id="0">vehicle</class>
+      <confidence>0.575752</confidence>
+      <bounding_box format="xyxy">
+        <x1>1735.94</x1>
+        <y1>530.22</y1>
+        <x2>1808.95</x2>
+        <y2>559.41</y2>
+      </bounding_box>
+      <center>
+        <x>1772.45</x>
+        <y>544.81</y>
+      </center>
+      <size>
+        <width>73.01</width>
+        <height>29.19</height>
+        <area>2130.74</area>
+      </size>
+    </detection>
+    <detection id="137">
+      <class id="0">vehicle</class>
+      <confidence>0.574388</confidence>
+      <bounding_box format="xyxy">
+        <x1>80.21</x1>
+        <y1>0.00</y1>
+        <x2>98.60</x2>
+        <y2>4.93</y2>
+      </bounding_box>
+      <center>
+        <x>89.41</x>
+        <y>2.47</y>
+      </center>
+      <size>
+        <width>18.39</width>
+        <height>4.93</height>
+        <area>90.73</area>
+      </size>
+    </detection>
+    <detection id="138">
+      <class id="0">vehicle</class>
+      <confidence>0.569282</confidence>
+      <bounding_box format="xyxy">
+        <x1>705.29</x1>
+        <y1>261.17</y1>
+        <x2>721.89</x2>
+        <y2>273.89</y2>
+      </bounding_box>
+      <center>
+        <x>713.59</x>
+        <y>267.53</y>
+      </center>
+      <size>
+        <width>16.61</width>
+        <height>12.72</height>
+        <area>211.17</area>
+      </size>
+    </detection>
+    <detection id="139">
+      <class id="0">vehicle</class>
+      <confidence>0.558727</confidence>
+      <bounding_box format="xyxy">
+        <x1>182.61</x1>
+        <y1>561.14</y1>
+        <x2>245.46</x2>
+        <y2>590.03</y2>
+      </bounding_box>
+      <center>
+        <x>214.03</x>
+        <y>575.58</y>
+      </center>
+      <size>
+        <width>62.84</width>
+        <height>28.90</height>
+        <area>1815.97</area>
+      </size>
+    </detection>
+    <detection id="140">
+      <class id="0">vehicle</class>
+      <confidence>0.548210</confidence>
+      <bounding_box format="xyxy">
+        <x1>82.91</x1>
+        <y1>21.06</y1>
+        <x2>99.37</x2>
+        <y2>35.60</y2>
+      </bounding_box>
+      <center>
+        <x>91.14</x>
+        <y>28.33</y>
+      </center>
+      <size>
+        <width>16.46</width>
+        <height>14.54</height>
+        <area>239.27</area>
+      </size>
+    </detection>
+    <detection id="141">
+      <class id="0">vehicle</class>
+      <confidence>0.533824</confidence>
+      <bounding_box format="xyxy">
+        <x1>279.86</x1>
+        <y1>13.54</y1>
+        <x2>303.66</x2>
+        <y2>27.83</y2>
+      </bounding_box>
+      <center>
+        <x>291.76</x>
+        <y>20.68</y>
+      </center>
+      <size>
+        <width>23.80</width>
+        <height>14.29</height>
+        <area>340.10</area>
+      </size>
+    </detection>
+    <detection id="142">
+      <class id="0">vehicle</class>
+      <confidence>0.515772</confidence>
+      <bounding_box format="xyxy">
+        <x1>380.73</x1>
+        <y1>603.37</y1>
+        <x2>447.16</x2>
+        <y2>629.80</y2>
+      </bounding_box>
+      <center>
+        <x>413.95</x>
+        <y>616.59</y>
+      </center>
+      <size>
+        <width>66.42</width>
+        <height>26.43</height>
+        <area>1755.76</area>
+      </size>
+    </detection>
+    <detection id="143">
+      <class id="0">vehicle</class>
+      <confidence>0.511371</confidence>
+      <bounding_box format="xyxy">
+        <x1>1180.62</x1>
+        <y1>540.87</y1>
+        <x2>1254.85</x2>
+        <y2>564.54</y2>
+      </bounding_box>
+      <center>
+        <x>1217.74</x>
+        <y>552.71</y>
+      </center>
+      <size>
+        <width>74.23</width>
+        <height>23.67</height>
+        <area>1757.06</area>
+      </size>
+    </detection>
+    <detection id="144">
+      <class id="0">vehicle</class>
+      <confidence>0.509378</confidence>
+      <bounding_box format="xyxy">
+        <x1>1402.91</x1>
+        <y1>744.28</y1>
+        <x2>1471.19</x2>
+        <y2>774.60</y2>
+      </bounding_box>
+      <center>
+        <x>1437.05</x>
+        <y>759.44</y>
+      </center>
+      <size>
+        <width>68.28</width>
+        <height>30.31</height>
+        <area>2069.98</area>
+      </size>
+    </detection>
+    <detection id="145">
+      <class id="0">vehicle</class>
+      <confidence>0.500048</confidence>
+      <bounding_box format="xyxy">
+        <x1>184.96</x1>
+        <y1>463.68</y1>
+        <x2>208.94</x2>
+        <y2>487.46</y2>
+      </bounding_box>
+      <center>
+        <x>196.95</x>
+        <y>475.57</y>
+      </center>
+      <size>
+        <width>23.98</width>
+        <height>23.78</height>
+        <area>570.05</area>
+      </size>
+    </detection>
+    <detection id="146">
+      <class id="0">vehicle</class>
+      <confidence>0.481021</confidence>
+      <bounding_box format="xyxy">
+        <x1>161.40</x1>
+        <y1>764.52</y1>
+        <x2>191.67</x2>
+        <y2>792.63</y2>
+      </bounding_box>
+      <center>
+        <x>176.53</x>
+        <y>778.57</y>
+      </center>
+      <size>
+        <width>30.27</width>
+        <height>28.11</height>
+        <area>850.78</area>
+      </size>
+    </detection>
+    <detection id="147">
+      <class id="0">vehicle</class>
+      <confidence>0.474950</confidence>
+      <bounding_box format="xyxy">
+        <x1>1.83</x1>
+        <y1>581.47</y1>
+        <x2>68.31</x2>
+        <y2>607.53</y2>
+      </bounding_box>
+      <center>
+        <x>35.07</x>
+        <y>594.50</y>
+      </center>
+      <size>
+        <width>66.49</width>
+        <height>26.06</height>
+        <area>1732.85</area>
+      </size>
+    </detection>
+    <detection id="148">
+      <class id="0">vehicle</class>
+      <confidence>0.461913</confidence>
+      <bounding_box format="xyxy">
+        <x1>12.82</x1>
+        <y1>85.99</y1>
+        <x2>29.75</x2>
+        <y2>103.28</y2>
+      </bounding_box>
+      <center>
+        <x>21.28</x>
+        <y>94.63</y>
+      </center>
+      <size>
+        <width>16.93</width>
+        <height>17.29</height>
+        <area>292.80</area>
+      </size>
+    </detection>
+    <detection id="149">
+      <class id="0">vehicle</class>
+      <confidence>0.459804</confidence>
+      <bounding_box format="xyxy">
+        <x1>815.34</x1>
+        <y1>615.92</y1>
+        <x2>870.48</x2>
+        <y2>641.72</y2>
+      </bounding_box>
+      <center>
+        <x>842.91</x>
+        <y>628.82</y>
+      </center>
+      <size>
+        <width>55.13</width>
+        <height>25.80</height>
+        <area>1422.35</area>
+      </size>
+    </detection>
+    <detection id="150">
+      <class id="0">vehicle</class>
+      <confidence>0.449581</confidence>
+      <bounding_box format="xyxy">
+        <x1>635.94</x1>
+        <y1>305.17</y1>
+        <x2>678.48</x2>
+        <y2>351.62</y2>
+      </bounding_box>
+      <center>
+        <x>657.21</x>
+        <y>328.40</y>
+      </center>
+      <size>
+        <width>42.54</width>
+        <height>46.45</height>
+        <area>1975.80</area>
+      </size>
+    </detection>
+    <detection id="151">
+      <class id="1">person</class>
+      <confidence>0.447506</confidence>
+      <bounding_box format="xyxy">
+        <x1>722.92</x1>
+        <y1>235.94</y1>
+        <x2>766.15</x2>
+        <y2>302.90</y2>
+      </bounding_box>
+      <center>
+        <x>744.54</x>
+        <y>269.42</y>
+      </center>
+      <size>
+        <width>43.23</width>
+        <height>66.96</height>
+        <area>2894.58</area>
+      </size>
+    </detection>
+    <detection id="152">
+      <class id="0">vehicle</class>
+      <confidence>0.442364</confidence>
+      <bounding_box format="xyxy">
+        <x1>1169.66</x1>
+        <y1>590.03</y1>
+        <x2>1220.44</x2>
+        <y2>616.92</y2>
+      </bounding_box>
+      <center>
+        <x>1195.05</x>
+        <y>603.47</y>
+      </center>
+      <size>
+        <width>50.77</width>
+        <height>26.89</height>
+        <area>1365.35</area>
+      </size>
+    </detection>
+    <detection id="153">
+      <class id="0">vehicle</class>
+      <confidence>0.422755</confidence>
+      <bounding_box format="xyxy">
+        <x1>210.39</x1>
+        <y1>524.11</y1>
+        <x2>238.01</x2>
+        <y2>549.21</y2>
+      </bounding_box>
+      <center>
+        <x>224.20</x>
+        <y>536.66</y>
+      </center>
+      <size>
+        <width>27.62</width>
+        <height>25.10</height>
+        <area>693.25</area>
+      </size>
+    </detection>
+    <detection id="154">
+      <class id="0">vehicle</class>
+      <confidence>0.421964</confidence>
+      <bounding_box format="xyxy">
+        <x1>478.93</x1>
+        <y1>639.82</y1>
+        <x2>542.43</x2>
+        <y2>671.45</y2>
+      </bounding_box>
+      <center>
+        <x>510.68</x>
+        <y>655.63</y>
+      </center>
+      <size>
+        <width>63.50</width>
+        <height>31.63</height>
+        <area>2008.79</area>
+      </size>
+    </detection>
+    <detection id="155">
+      <class id="0">vehicle</class>
+      <confidence>0.411026</confidence>
+      <bounding_box format="xyxy">
+        <x1>781.49</x1>
+        <y1>231.25</y1>
+        <x2>818.30</x2>
+        <y2>250.88</y2>
+      </bounding_box>
+      <center>
+        <x>799.89</x>
+        <y>241.06</y>
+      </center>
+      <size>
+        <width>36.81</width>
+        <height>19.63</height>
+        <area>722.51</area>
+      </size>
+    </detection>
+    <detection id="156">
+      <class id="0">vehicle</class>
+      <confidence>0.402004</confidence>
+      <bounding_box format="xyxy">
+        <x1>1148.01</x1>
+        <y1>562.16</y1>
+        <x2>1214.06</x2>
+        <y2>590.99</y2>
+      </bounding_box>
+      <center>
+        <x>1181.04</x>
+        <y>576.57</y>
+      </center>
+      <size>
+        <width>66.05</width>
+        <height>28.83</height>
+        <area>1904.05</area>
+      </size>
+    </detection>
+    <detection id="157">
+      <class id="0">vehicle</class>
+      <confidence>0.399345</confidence>
+      <bounding_box format="xyxy">
+        <x1>136.38</x1>
+        <y1>31.05</y1>
+        <x2>154.15</x2>
+        <y2>45.11</y2>
+      </bounding_box>
+      <center>
+        <x>145.27</x>
+        <y>38.08</y>
+      </center>
+      <size>
+        <width>17.78</width>
+        <height>14.06</height>
+        <area>249.91</area>
+      </size>
+    </detection>
+    <detection id="158">
+      <class id="0">vehicle</class>
+      <confidence>0.379232</confidence>
+      <bounding_box format="xyxy">
+        <x1>823.25</x1>
+        <y1>217.79</y1>
+        <x2>866.06</x2>
+        <y2>237.56</y2>
+      </bounding_box>
+      <center>
+        <x>844.66</x>
+        <y>227.67</y>
+      </center>
+      <size>
+        <width>42.80</width>
+        <height>19.77</height>
+        <area>846.03</area>
+      </size>
+    </detection>
+    <detection id="159">
+      <class id="0">vehicle</class>
+      <confidence>0.375514</confidence>
+      <bounding_box format="xyxy">
+        <x1>136.24</x1>
+        <y1>43.09</y1>
+        <x2>155.17</x2>
+        <y2>64.00</y2>
+      </bounding_box>
+      <center>
+        <x>145.71</x>
+        <y>53.54</y>
+      </center>
+      <size>
+        <width>18.93</width>
+        <height>20.90</height>
+        <area>395.78</area>
+      </size>
+    </detection>
+    <detection id="160">
+      <class id="0">vehicle</class>
+      <confidence>0.346514</confidence>
+      <bounding_box format="xyxy">
+        <x1>207.57</x1>
+        <y1>886.05</y1>
+        <x2>278.28</x2>
+        <y2>916.93</y2>
+      </bounding_box>
+      <center>
+        <x>242.93</x>
+        <y>901.49</y>
+      </center>
+      <size>
+        <width>70.71</width>
+        <height>30.88</height>
+        <area>2183.23</area>
+      </size>
+    </detection>
+    <detection id="161">
+      <class id="0">vehicle</class>
+      <confidence>0.338049</confidence>
+      <bounding_box format="xyxy">
+        <x1>1303.72</x1>
+        <y1>526.44</y1>
+        <x2>1372.67</x2>
+        <y2>553.06</y2>
+      </bounding_box>
+      <center>
+        <x>1338.20</x>
+        <y>539.75</y>
+      </center>
+      <size>
+        <width>68.95</width>
+        <height>26.61</height>
+        <area>1834.98</area>
+      </size>
+    </detection>
+    <detection id="162">
+      <class id="0">vehicle</class>
+      <confidence>0.316705</confidence>
+      <bounding_box format="xyxy">
+        <x1>138.32</x1>
+        <y1>376.74</y1>
+        <x2>163.04</x2>
+        <y2>394.73</y2>
+      </bounding_box>
+      <center>
+        <x>150.68</x>
+        <y>385.73</y>
+      </center>
+      <size>
+        <width>24.72</width>
+        <height>17.99</height>
+        <area>444.76</area>
+      </size>
+    </detection>
+    <detection id="163">
+      <class id="0">vehicle</class>
+      <confidence>0.306364</confidence>
+      <bounding_box format="xyxy">
+        <x1>0.00</x1>
+        <y1>101.75</y1>
+        <x2>11.28</x2>
+        <y2>118.58</y2>
+      </bounding_box>
+      <center>
+        <x>5.64</x>
+        <y>110.17</y>
+      </center>
+      <size>
+        <width>11.28</width>
+        <height>16.83</height>
+        <area>189.90</area>
+      </size>
+    </detection>
+    <detection id="164">
+      <class id="0">vehicle</class>
+      <confidence>0.297549</confidence>
+      <bounding_box format="xyxy">
+        <x1>1394.51</x1>
+        <y1>535.91</y1>
+        <x2>1478.73</x2>
+        <y2>562.51</y2>
+      </bounding_box>
+      <center>
+        <x>1436.62</x>
+        <y>549.21</y>
+      </center>
+      <size>
+        <width>84.22</width>
+        <height>26.60</height>
+        <area>2239.89</area>
+      </size>
+    </detection>
+    <detection id="165">
+      <class id="0">vehicle</class>
+      <confidence>0.295723</confidence>
+      <bounding_box format="xyxy">
+        <x1>40.50</x1>
+        <y1>30.80</y1>
+        <x2>58.74</x2>
+        <y2>48.45</y2>
+      </bounding_box>
+      <center>
+        <x>49.62</x>
+        <y>39.62</y>
+      </center>
+      <size>
+        <width>18.24</width>
+        <height>17.66</height>
+        <area>322.01</area>
+      </size>
+    </detection>
+    <detection id="166">
+      <class id="0">vehicle</class>
+      <confidence>0.285929</confidence>
+      <bounding_box format="xyxy">
+        <x1>195.60</x1>
+        <y1>72.04</y1>
+        <x2>216.48</x2>
+        <y2>84.80</y2>
+      </bounding_box>
+      <center>
+        <x>206.04</x>
+        <y>78.42</y>
+      </center>
+      <size>
+        <width>20.87</width>
+        <height>12.76</height>
+        <area>266.29</area>
+      </size>
+    </detection>
+    <detection id="167">
+      <class id="0">vehicle</class>
+      <confidence>0.281031</confidence>
+      <bounding_box format="xyxy">
+        <x1>1820.02</x1>
+        <y1>719.82</y1>
+        <x2>1876.61</x2>
+        <y2>742.49</y2>
+      </bounding_box>
+      <center>
+        <x>1848.32</x>
+        <y>731.15</y>
+      </center>
+      <size>
+        <width>56.59</width>
+        <height>22.67</height>
+        <area>1282.80</area>
+      </size>
+    </detection>
+    <detection id="168">
+      <class id="0">vehicle</class>
+      <confidence>0.272753</confidence>
+      <bounding_box format="xyxy">
+        <x1>1578.01</x1>
+        <y1>554.48</y1>
+        <x2>1648.59</x2>
+        <y2>581.69</y2>
+      </bounding_box>
+      <center>
+        <x>1613.30</x>
+        <y>568.08</y>
+      </center>
+      <size>
+        <width>70.58</width>
+        <height>27.21</height>
+        <area>1920.55</area>
+      </size>
+    </detection>
+    <detection id="169">
+      <class id="0">vehicle</class>
+      <confidence>0.261005</confidence>
+      <bounding_box format="xyxy">
+        <x1>1.20</x1>
+        <y1>144.85</y1>
+        <x2>36.23</x2>
+        <y2>165.26</y2>
+      </bounding_box>
+      <center>
+        <x>18.71</x>
+        <y>155.05</y>
+      </center>
+      <size>
+        <width>35.03</width>
+        <height>20.41</height>
+        <area>714.99</area>
+      </size>
+    </detection>
+    <detection id="170">
+      <class id="0">vehicle</class>
+      <confidence>0.239460</confidence>
+      <bounding_box format="xyxy">
+        <x1>1177.04</x1>
+        <y1>576.55</y1>
+        <x2>1241.46</x2>
+        <y2>604.71</y2>
+      </bounding_box>
+      <center>
+        <x>1209.25</x>
+        <y>590.63</y>
+      </center>
+      <size>
+        <width>64.42</width>
+        <height>28.16</height>
+        <area>1813.99</area>
+      </size>
+    </detection>
+    <detection id="171">
+      <class id="0">vehicle</class>
+      <confidence>0.235321</confidence>
+      <bounding_box format="xyxy">
+        <x1>110.99</x1>
+        <y1>95.81</y1>
+        <x2>123.42</x2>
+        <y2>104.86</y2>
+      </bounding_box>
+      <center>
+        <x>117.20</x>
+        <y>100.33</y>
+      </center>
+      <size>
+        <width>12.43</width>
+        <height>9.05</height>
+        <area>112.52</area>
+      </size>
+    </detection>
+    <detection id="172">
+      <class id="0">vehicle</class>
+      <confidence>0.234023</confidence>
+      <bounding_box format="xyxy">
+        <x1>641.95</x1>
+        <y1>91.75</y1>
+        <x2>686.43</x2>
+        <y2>108.96</y2>
+      </bounding_box>
+      <center>
+        <x>664.19</x>
+        <y>100.36</y>
+      </center>
+      <size>
+        <width>44.48</width>
+        <height>17.21</height>
+        <area>765.40</area>
+      </size>
+    </detection>
+    <detection id="173">
+      <class id="0">vehicle</class>
+      <confidence>0.232666</confidence>
+      <bounding_box format="xyxy">
+        <x1>771.30</x1>
+        <y1>536.15</y1>
+        <x2>825.29</x2>
+        <y2>567.59</y2>
+      </bounding_box>
+      <center>
+        <x>798.29</x>
+        <y>551.87</y>
+      </center>
+      <size>
+        <width>54.00</width>
+        <height>31.44</height>
+        <area>1697.40</area>
+      </size>
+    </detection>
+    <detection id="174">
+      <class id="0">vehicle</class>
+      <confidence>0.232564</confidence>
+      <bounding_box format="xyxy">
+        <x1>1482.03</x1>
+        <y1>565.29</y1>
+        <x2>1552.06</x2>
+        <y2>593.39</y2>
+      </bounding_box>
+      <center>
+        <x>1517.04</x>
+        <y>579.34</y>
+      </center>
+      <size>
+        <width>70.03</width>
+        <height>28.10</height>
+        <area>1967.71</area>
+      </size>
+    </detection>
+    <detection id="175">
+      <class id="0">vehicle</class>
+      <confidence>0.229032</confidence>
+      <bounding_box format="xyxy">
+        <x1>0.00</x1>
+        <y1>640.28</y1>
+        <x2>23.76</x2>
+        <y2>664.74</y2>
+      </bounding_box>
+      <center>
+        <x>11.88</x>
+        <y>652.51</y>
+      </center>
+      <size>
+        <width>23.76</width>
+        <height>24.45</height>
+        <area>580.85</area>
+      </size>
+    </detection>
+    <detection id="176">
+      <class id="2">bicycle</class>
+      <confidence>0.228673</confidence>
+      <bounding_box format="xyxy">
+        <x1>1791.73</x1>
+        <y1>784.02</y1>
+        <x2>1802.64</x2>
+        <y2>805.50</y2>
+      </bounding_box>
+      <center>
+        <x>1797.19</x>
+        <y>794.76</y>
+      </center>
+      <size>
+        <width>10.91</width>
+        <height>21.48</height>
+        <area>234.28</area>
+      </size>
+    </detection>
+    <detection id="177">
+      <class id="0">vehicle</class>
+      <confidence>0.228011</confidence>
+      <bounding_box format="xyxy">
+        <x1>902.24</x1>
+        <y1>201.08</y1>
+        <x2>950.32</x2>
+        <y2>221.31</y2>
+      </bounding_box>
+      <center>
+        <x>926.28</x>
+        <y>211.20</y>
+      </center>
+      <size>
+        <width>48.09</width>
+        <height>20.24</height>
+        <area>973.20</area>
+      </size>
+    </detection>
+    <detection id="178">
+      <class id="0">vehicle</class>
+      <confidence>0.226211</confidence>
+      <bounding_box format="xyxy">
+        <x1>1691.17</x1>
+        <y1>526.81</y1>
+        <x2>1755.56</x2>
+        <y2>551.44</y2>
+      </bounding_box>
+      <center>
+        <x>1723.36</x>
+        <y>539.13</y>
+      </center>
+      <size>
+        <width>64.40</width>
+        <height>24.62</height>
+        <area>1585.76</area>
+      </size>
+    </detection>
+    <detection id="179">
+      <class id="0">vehicle</class>
+      <confidence>0.220883</confidence>
+      <bounding_box format="xyxy">
+        <x1>148.03</x1>
+        <y1>387.36</y1>
+        <x2>174.40</x2>
+        <y2>411.70</y2>
+      </bounding_box>
+      <center>
+        <x>161.22</x>
+        <y>399.53</y>
+      </center>
+      <size>
+        <width>26.37</width>
+        <height>24.34</height>
+        <area>641.96</area>
+      </size>
+    </detection>
+    <detection id="180">
+      <class id="2">bicycle</class>
+      <confidence>0.220388</confidence>
+      <bounding_box format="xyxy">
+        <x1>393.04</x1>
+        <y1>888.54</y1>
+        <x2>402.97</x2>
+        <y2>912.51</y2>
+      </bounding_box>
+      <center>
+        <x>398.00</x>
+        <y>900.52</y>
+      </center>
+      <size>
+        <width>9.93</width>
+        <height>23.97</height>
+        <area>237.94</area>
+      </size>
+    </detection>
+    <detection id="181">
+      <class id="0">vehicle</class>
+      <confidence>0.219694</confidence>
+      <bounding_box format="xyxy">
+        <x1>166.54</x1>
+        <y1>71.32</y1>
+        <x2>187.00</x2>
+        <y2>82.59</y2>
+      </bounding_box>
+      <center>
+        <x>176.77</x>
+        <y>76.96</y>
+      </center>
+      <size>
+        <width>20.46</width>
+        <height>11.27</height>
+        <area>230.60</area>
+      </size>
+    </detection>
+  </detections>
+</detection_results>
